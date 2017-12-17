@@ -2,7 +2,7 @@
 
 echo -e "\033[0;32mFetching todays quote...\033[0m"
 
-Rcript fetch_quote.R
+Rscript fetch_quote.R
 
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
@@ -19,4 +19,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public git@github.com:apoorv74/apoorv74.github.io.git master
+git subtree push --prefix=public https://github.com/apoorv74/apoorv74.github.io.git master
