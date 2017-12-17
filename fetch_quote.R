@@ -1,3 +1,5 @@
+
+fetchquote <- function(){
 library(rvest)
 
 #Daily Zen URL
@@ -47,3 +49,4 @@ text_to_write <- paste0(text_meta, "\n> ",quote['quote'],"\n\n","> ",quote['auth
 
 writeLines(file_con, text = text_to_write)
 close(file_con)
+}
