@@ -14,6 +14,6 @@ The blog is divided in two overall categories:
 
 > In the current phase of my life, I am mostly involved with working around and building data science related software. I love [R](https://www.r-project.org/about.html), the history it has been a part of, the current R community and the future it beholds.
 
-As a software engineer I believe in the power of FOSS, and I hope to make positive efforts in a way it is useful for myself and the community which has taught me everything I know.
+As a software engineer I believe in the power of FOSS, and I hope to make positive efforts, useful for myself and the community, which has taught me everything I know.
 
 The site was created using [Blogdown](https://github.com/rstudio/blogdown) and I would like to  acknowledge the efforts of [Yihui Xie](https://github.com/yihui) and team for making it so easy to create websites within the R environment
