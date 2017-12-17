@@ -7,6 +7,6 @@ weight: -270
 #### A short bite of wisdom courtesy [Daily Zen](https://www.dailyzen.com/)
 
 
-> There is no end or beginning,Nor any middle course.All is illusion,As in a vision or a dream.
+> If pressed to compareThis brief life,I might declare:It's like the boatThat crossed this morning's harbor,Leaving no mark on the world.
 
-> Prajnaparamita Sutra
+> Mansei (730)
