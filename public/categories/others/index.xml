@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Others on Behind Bars</title>
+    <link>/apoorv74.github.io/categories/others/</link>
+    <description>Recent content in Others on Behind Bars</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 Sep 2017 08:00:00 +0600</lastBuildDate>
+    
+	<atom:link href="/apoorv74.github.io/categories/others/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Example config.toml</title>
+      <link>/apoorv74.github.io/docs/example-config-toml/</link>
+      <pubDate>Mon, 25 Sep 2017 08:00:00 +0600</pubDate>
+      
+      <guid>/apoorv74.github.io/docs/example-config-toml/</guid>
+      <description>Example config.toml configuration for Minimo:
+baseURL = &amp;#34;apoorv74.github.io&amp;#34; title = &amp;#34;Behind Bars&amp;#34; # for smart copyright line, leave this blank and check [params.copyright] copyright = &amp;#34;&amp;#34; theme = &amp;#34;minimo&amp;#34; disqusShortname = &amp;#34;apoorv74githubio&amp;#34; googleAnalytics = &amp;#34;UA-66023783-1&amp;#34; Paginate = 5 preserveTaxonomyNames = true enableRobotsTXT = true # generate robots.txt # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ ) pygmentsCodefences = true # Missing translations will default to this content language defaultContentLanguage = &amp;#34;en&amp;#34; [params.info] description = &amp;#34;A journey&amp;#34; title404 = &amp;#34;Nothing&amp;#39;s here!</description>
+    </item>
+    
+  </channel>
+</rss>

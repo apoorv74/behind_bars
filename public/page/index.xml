@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Behind Bars</title>
+    <link>/apoorv74.github.io/page/</link>
+    <description>Recent content in Pages on Behind Bars</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/apoorv74.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/apoorv74.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/apoorv74.github.io/about/</guid>
+      <description>Hi!, I&amp;rsquo;m Apoorv, I work as a Data Engineer for SocialCops in New Delhi and the blog is a place to document my work, thoughts, ideas, mistakes and in one word my journey. I hail from not-a-small-town called Jabalpur in Madhya Pradesh, and when I&amp;rsquo;m at home,I love spending my evenings just wandering near one of the many banks of river Narmada. I also volunteer with Janwaar Castle, aka The Rural Change Makers, and have learnt a lot of life lessons since my association with Ulrike and the team in past two years.</description>
+    </item>
+    
+  </channel>
+</rss>
