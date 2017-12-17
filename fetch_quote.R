@@ -10,7 +10,7 @@ url <- "https://www.dailyzen.com/"
 quote_status <- 0
 tryCatch({
   quote <- url %>% read_html() %>% html_nodes(css = ".zen--quote") %>% html_text()
-  quote <- stringr::str_replace_all(quote, "\\n", "")
+  # quote <- stringr::str_replace_all(quote, "\\n", "")
   quote <- stringr::str_trim(unlist(stringr::str_split(quote, pattern = "\\t")))
   quote <- quote[!quote %in% ""]
   names(quote) <- c("date", "quote", "author")
