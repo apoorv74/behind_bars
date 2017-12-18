@@ -42,7 +42,7 @@ We learnt a lot of things in the process, being limited in my research I do not 
 
 Another one, the **UJJWALA** yojana - Though the intent behind this is great and the implementation is also not as faulty as the above, it is on the better side. One common concern is not being able to refill the cylinder after the initial purchase. So great, if the government can concentrate further on that part. Also, most of the villagers are not able to benefit from this scheme as there names are not included, yes SECC is also old now, but this is not a big problem to solve. 
 
-But life move on, this time of the year,the village lake in which the water is definitely not upto the level it hsould be, is a heaven for people who love fishing, peacefully children and adults sit beside this serene lake and indulge like a monk during meditation. I managed to capture some parts of the village which includes the play area, lake, tress house and the skate park itself. Check them out here. 
+But life moves on, this time of the year,the village lake in which the water levels are definitely alarming, is still a heaven for people who love fishing. Children and adults sit peacefully beside this serene lake and indulge like a monk during meditation. I managed to capture some parts of the village which includes the play area, lake, the tree house and the skate park itself. Check them out here. 
 
 <blockquote class="imgur-embed-pub" lang="en" data-id="a/w3TlV"><a href="//imgur.com/w3TlV">A day in Janwaar</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
