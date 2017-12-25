@@ -52,7 +52,6 @@ Amazed!! The program started with 57K KM's and ended computing the total distanc
 
 <img src="/images/the-optimal-route.png" title="The optimal route" />
 
-An interactive version [here](https://rawgit.com/apoorv74/apoorv74.github.io/master/major-landmarks.html).
 
 ##### Here is the list of destinations in order
 
