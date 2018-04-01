@@ -75,10 +75,10 @@ page = "/:slug/"
 
 
 [[menu.main]]
-name = "Repo"
-weight = -10
-identifier = "repository"
-url = "https://github.com/apoorv74/behind_bars"
+#name = "Repo"
+#weight = -10
+#identifier = "repository"
+#url = "https://github.com/apoorv74/behind_bars"
 
 [blackfriday]
 hrefTargetBlank = true
