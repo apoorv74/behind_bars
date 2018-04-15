@@ -13,6 +13,7 @@ preserveTaxonomyNames = true
 
 enableRobotsTXT = true # generate robots.txt
 enableRSS = true
+rssLimit= 10
 
 # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
 pygmentsCodefences = true
