@@ -1,6 +1,6 @@
 ---
 date: 2018-06-29T14:00:00+06:00
-title: FIFA WC 2018 - with mlr, jq and you!! 
+title: FIFA WC 2018 - with mlr, jq and friends!! 
 authors: ["muniftanjim"]
 categories:
   - football
@@ -15,23 +15,23 @@ cover:
 ---
 
 
-The group stage of the FIFA World Cup 2018 ended yesterday with Belgium defeating England by a goal. What a tournament this is turning out to be, superb goals (Kroo's banger was the best for me), not-so-predictable results, the Asians playing well (good luck Japan), extra time surprises and who can forget those VAR stories of penalties. Here is Nordin Amrabat showing some love for the technology. 
+The group stage of **FIFA World Cup 2018** ended yesterday with Belgium defeating England by a goal. What a tournament this is turning out to be, superb goals (Kroo's banger was the best for me), not-so-predictable results, the Asians playing well (good luck Japan), extra time surprises and who can forget those VAR stories of penalties. Here is Nordin Amrabat showing some love for the technology. 
 
 
 {{<youtube HpQJ8rxaPi0>}}
 
-This has also been a tournament with some of the best tweets I've seen. Just have a look at this probability plot for possible Group F outcomes.
+This has also been a tournament with some of the best tweets I've read. Just have a look at this probability plot for possible Group F outcomes.
 
 {{<tweet 1011967148149727234>}}
 
 Follow [@JPVSilva88](https://twitter.com/JPVSilva88), [@jburnmurdoch](https://twitter.com/jburnmurdoch), [@StatsZone](https://twitter.com/StatsZone) for such amazing updates and [@8bitfootball](https://twitter.com/8bitfootball) for some 8 bit swag !!
 
 
-I'd been searhcing for some ideas myself to do something since the tournament started, the game is full of data points and you just need curious minds to weave some together and come up with beautiful stories. Sometime back, I had explored this functional command line utility called [miller](https://johnkerl.org/miller/) by John Kerl. In short miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON. I wanted to share and promote it as it has been a productive tool for me and you should definitely add it to your data processing toolkit. What better opportunity than using it to explore the World Cup. 
+I went on the exploration mode as well since the tournament started as the game is full of data points and you just need some curious minds to weave them together and come up with beautiful stories. Sometime back, I was introduced to a functional command line utility called [miller](https://johnkerl.org/miller/) by John Kerl. In short *miller* is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON. I wanted to share and promote it as it has been a productive tool for me and what better opportunity than using it to explore the World Cup. You should definitely consider adding it to your data processing toolkit. 
 
-For this post, we'll use such open source command line utilities like miller, jq (the json processor) and some R (of-course) to analyse the tournament so far and let's see if we can come up with something worth a share. For the data, we'll be using the superb API from [football-data.org](http://football-data.org/). I'll urge you to get your API key before proceeding further which can be obtained easily from this [link](https://www.football-data.org/client/register). We'll be registering for the free account as the data we get access to is somewhat sufficent for this post but you should definitely check out the full version as well. The team is doing an amazing job to get us the live updates as fast as possible. So let's get started!!
+For this post, we'll use such open source command line utilities like *miller*, *jq* (the json processor), some *awk*, *sed* (where I'm not yet skilled enough to use miller) and **R** (of-course) to analyse the tournament so far and let's see if we can come up with something worth a share. For the data, we'll be using the superb API from [football-data.org](http://football-data.org/). I'll urge you to get your *API* key before proceeding further which can be obtained easily from this [link](https://www.football-data.org/client/register). We'll be registering for the free account as the data we get access to is somewhat sufficent for this post but you should definitely check out the full version as well. The team is doing an amazing job to get us the live updates as fast as possible. So let's get started!!
 
-The fixtures for the knock-outs have been finalised. So let's check who's playing whom
+The fixtures for the knock-outs have been finalised. So let us start by checking who's playing whom
 
 ```bash
 
@@ -59,7 +59,9 @@ curl "http://api.football-data.org/v1/fixtures/165119" | \
 
 <img src="/images/past_clashes.png" title="Past clashes" />
 
-> Two matches and Argentina winnig both of them, I feel France will be on the winnig side this time around. 
+> Two matches and Argentina winning both of them, though I feel France will be on the winnig side this time around. 
+
+Some football trivia courtesy *OneFootball* - On both these occasions, Argentina reached the final,loosing it in 1930 and winning it in 1978. The last South American team to beat France were Argentina in 1978, since then, France are unbeaten in 8 world cup fixtures against CONMEBOL opposition (W4, D4)
 
 France as a team is studded with stars at all positions. But how has there journey been till now, let's have a look at there Group Stage results. 
 
@@ -89,7 +91,7 @@ curl "http://api.football-data.org/v1/competitions/467/fixtures" | \
  mlr --icsv --ocsv rename htn,team,rht,gs,rat,ga > /tmp/home_scores.csv && awk 'BEGIN {FS="," ; OFS = ","}; {print $1,$3,$2}' /tmp/home_scores.csv > /tmp/home_scores_mod.csv && sed 1d /tmp/home_scores_mod.csv >> /tmp/results_all_teams.csv
 ```
 
-Now let's have a look at the **top goal scoring** teams in the group stage. 
+Now let's have a look at the *top goal scoring* teams in the group stage. 
 
 ```bash
 
@@ -105,7 +107,7 @@ cat /tmp/results_all_teams.csv | \
 
 > France and Argentina scored 3 goals each, though Argentina conceeded 5 while France only let 1 goal in. This can be a deciding factor between the two teams. 
 
-Let's move on to the favorite part of this analysis, the **Players** themselves. For this, we will write a small R script to fetch data for all players participating in this competition. 
+Now, let's move on to my favorite part of this analysis, the **Players** themselves. For this, we will write a small R script to fetch data for all players participating in this competition. 
 
 ```R
 library(tidyverse)
@@ -132,9 +134,9 @@ cat /tmp/all_players.json | \
  mlr --ijson --ocsv cat > /tmp/all_players.csv
 ```
 
-**Kylian Mbappé** was declared the youngest goal scorer for France at World Cup Finals. He's definitely not alone as there are a lot of youngsters participating in world cup. Let's look at the top 10 youngest players. 
+*Kylian Mbappé* was declared the youngest goal scorer for France at World Cup Finals. He's definitely not alone as there are a lot of youngsters participating in world cup. Let's look at the top 10 youngest players. 
 
-Note: Some players were a part of there larger WC squads but not of the last 23, so there can be some discrepancies in the API. 
+Note: *Some players were a part of there larger WC squads but not of the last 23, so there can be some discrepancies in the API.*
 
 ```bash
 cat /tmp/all_players.csv | \
@@ -158,10 +160,12 @@ cat /tmp/all_players.csv | \
 
 > Looks like teams trust experience goalies at the tournament, average age of a keeper is ~30 years. Left wing is an attacking position (Sadio Mane for Liverpool), most players here are ~25 years of age 
 
-I sesnse a brilliant opportunity here for using some ggplot magick here. What if we can plot the youngest and the oldest players at every potion and look at the results on top of a rectangular field (the same way team roasters are presented live on televisions). 
+How can we not use a *ggplot* with such a beautiful dataset. What if we can plot the youngest and the oldest players at every potion and look at the results on top of a rectangular field (the same way team roasters are presented live on televisions). 
 
-We wrote a small script for this task, it takes two parameters, player data (name, age, position, country) and the type ([y]oung/[o]ld) and then plots a field with names and respective country flags. Lets look at the results
+We wrote a [small script](https://gist.github.com/apoorv74/e4108b9ad9d3d14eb208dd15505be3b6) for this task, it takes two parameters, player data (name, age, position, country) and the type ([y]oung/[o]ld) and then plots a field with names and respective country flags. Lets look at the results.
 
+
+#### <center> Team Agile 11
 ```bash
 ./getPositionStats.R /tmp/all_players_age.csv y
 ```
@@ -170,14 +174,19 @@ We wrote a small script for this task, it takes two parameters, player data (nam
 
 Yes, i know, Kylian Mbappé is not part of the youngest team, API tags him as a right winger and there are players younger than him at that position. Not my fault fellas!!
 
+
+#### <center> Team Wisdom 11 
+```bash
+./getPositionStats.R /tmp/all_players_age.csv y
+```
+
 <img src="/images/teamSenior.png" title="teamSenior" />
 
 And here's our tribute to the oldest player participating in this WC!!
 
 {{<tweet 1011258958076510208>}}
 
-
-I just wanted to check if I share my birthday with some WC players participating in 2018. Lets see 
+We are almost towards the end, let's end our exploration by checking if I share my birthday with some WC players participating in 2018.
 
 ```bash
 cat /tmp/all_players.csv | \
@@ -190,9 +199,9 @@ And yes!! The Serbian and Crystal Palace Midfielder ..
 
 Thanks for reading :)
 
-Writing this, I've learnt a lot of things, I hope you will too. 
+I learnt a lot of things writing this and I hope you will too. 
 
-I could have not written this with the help of such brilliant open source tools. I thank and appreciate there creators and the community behind it and hope we can support it in whatever ways we can. 
+I could have not written this with the help of such brilliant open source tools. I thank and appreciate there creators and the community behind it and hope we can support it in whatever ways we can. The documentation of these tools is brilliant and can be accessed [here](https://johnkerl.org/miller/doc/reference.html) and [here](https://stedolan.github.io/jq/manual/). 
 
 Enjoy the World Cup guys, Bring on the Knock Outs!!
 
