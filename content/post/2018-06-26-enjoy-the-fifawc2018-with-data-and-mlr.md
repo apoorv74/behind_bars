@@ -29,7 +29,9 @@ Follow [@JPVSilva88](https://twitter.com/JPVSilva88), [@jburnmurdoch](https://tw
 
 I'd been searhcing for some ideas myself to do something since the tournament started, the game is full of data points and you just need curious minds to weave some together and come up with beautiful stories. I had explored this functional command line utility called [miller](https://johnkerl.org/miller/) by John Kerl. In short miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON. I wanted to share and promote it as it has been a productive tool for me and you should definitely add it to your data processing toolkit. What better opportunity than using it to explore the World Cup. 
 
-For this post, we'll use such open source command line utilities like miller, jq and some R (of-course) to analyse the tournament so far and let's see if we can come up with something worth a share. For the data, we'll be using the superb API from [football-data.org](http://football-data.org/). I'll urge you to get your API key before proceeding further which can be obtained easily from this [link](https://www.football-data.org/client/register). We'll be registering for the free account as the data we get access to is somewhat sufficent for this post but you should definitely check out the full version as well. The team is doing an amazing job to get us the live updates as fast as possible. So let's get started!!
+For this post, we'll use such open source command line utilities like miller, jq (the json processor) and some R (of-course) to analyse the tournament so far and let's see if we can come up with something worth a share. For the data, we'll be using the superb API from [football-data.org](http://football-data.org/). I'll urge you to get your API key before proceeding further which can be obtained easily from this [link](https://www.football-data.org/client/register). We'll be registering for the free account as the data we get access to is somewhat sufficent for this post but you should definitely check out the full version as well. The team is doing an amazing job to get us the live updates as fast as possible. So let's get started!!
+
+Note: All scripts used above are documented in this gist. 
 
 The fixtures for the knock-outs have been finalised. So let's check who's playing whom
 
@@ -38,7 +40,7 @@ The fixtures for the knock-outs have been finalised. So let's check who's playin
 #KO fixtures
 
 curl "http://api.football-data.org/v1/competitions/467/fixtures?timeFrameStart=2018-06-30&timeFrameEnd=2018-07-03" \
- | jq '.fixtures[] | {htn:.homeTeamName, atn:.awayTeamName, date:.date}' \
+ | jq '.fixtures[] | {htn:.homeTeamName, atn:.awayTeamName, date:.date, matchLink:._links.self[]}' \
  | mlr --ijson --opprint --barred cat
 ```
 
@@ -57,22 +59,26 @@ curl "http://api.football-data.org/v1/fixtures/165119" | \
  mlr --icsv --opprint --barred cat
 ```
 
+<img src="/images/past_clashes.png" title="Past clashes" />
+
 > Two matches and Argentina winnig both of them, I feel France will be on the winnig side this time around. 
 
 France as a team is studded with stars at all positions. But how has there journey been till now, let's have a look at there Group Stage results. 
 
 ```bash
 
+# Group stage performance - France
+
 curl "http://api.football-data.org/v1/competitions/467/fixtures" | \
  jq '.fixtures[] | {homeTeamName: .homeTeamName, awayTeamName: .awayTeamName, resultHomeTeam: .result.goalsHomeTeam, resultAwayTeam:.result.goalsAwayTeam}' | \
  mlr --ijson --ocsv filter '($homeTeamName == "France" || $awayTeamName == "France") && ($resultHomeTeam != "")' |
  mlr --icsv --opprint --barred cat
 ```
+<img src="/images/france_gs.png" title="France - Group stage performance" />
 
 > France won both there matches against a weaker opposition, but drew with Denmark. They'll definitely have to play better than that to beat Argentina. 
 
-
-Instead of querying the API for every team, let's also prepare a temporary dataset with all teams and filter as per our needs
+Instead of querying the API for every team, let us prepare a temporary dataset with all teams and filter as per our needs
 
 ```bash
 # Preparing the result dataset for the group stages
@@ -95,6 +101,8 @@ cat /tmp/results_all_teams.csv | \
  mlr --icsv --ocsv filter '$team != "" && $gs >= 0' | \
  mlr --icsv --opprint --barred  stats1 -a sum -f gs,ga -g team then sort -nr gs_sum
 ```
+<img src="/images/top_goal_scorers.png" title="Top Goal Scorers" />
+
 > Wooh !! Belgium tops the charts with 9 goals, closely followed by England and Russia with 8 goals each. 
 
 > France and Argentina scored 3 goals each, though Argentina conceeded 5 while France only let 1 goal in. This can be a deciding factor between the two teams. 
@@ -137,6 +145,8 @@ cat /tmp/all_players.csv | \
  mlr --icsv --opprint --barred head -n 10
 ```
 
+<img src="/images/young_players.png" title="Top 10 young players as per age" />
+
 Since, the API provides the position labels as well, lets look at some position level statistics
 
 ```bash
@@ -145,6 +155,8 @@ cat /tmp/all_players.csv | \
  mlr --icsv --ocsv --barred sort -nr age | \
  mlr --icsv --opprint --barred stats1 -a min,max,mean -f age -g position
 ```
+
+<img src="/images/position_stats.png" title="Position Stats" />
 
 > Looks like teams trust experience goalies at the tournament, average age of a keeper is ~30 years. Left wing is an attacking position (Sadio Mane for Liverpool), most players here are ~25 years of age 
 
@@ -167,7 +179,22 @@ And here's our tribute to the oldest player participating in this WC!!
 {{<tweet 1011258958076510208>}}
 
 
-With this, we wrap up our post. Writing this, I've definitely learnt a lot of things, I hope you will too. All scripts used above are documented in this gist. 
+I just wanted to check if I share my birthday with some WC players participating in 2018. Lets see 
+
+```bash
+cat /tmp/all_players.csv | \
+ mlr --icsv --ocsv put '$age=(systime()-strptime($dateOfBirth,"%Y-%m-%d"))/(365*24*3600)' | \
+ mlr --icsv --opprint --barred filter '$dateOfBirth == "1991-04-07"'
+```
+And yes!! The Serbian and Crystal Palace Midfielder .. 
+
+<img src="/images/share_bday.png" title="We were born on the same day !!" />
+
+Thanks for reading :)
+
+Writing this, I've learnt a lot of things, I hope you will too. 
+
+I could have not written this with the help of such brilliant open source tools. I thank and appreciate there creators and the community behind it and hope we can support it in whatever ways we can. 
 
 Enjoy the World Cup guys, Bring on the Knock Outs!!
 
