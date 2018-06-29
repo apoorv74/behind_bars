@@ -20,18 +20,16 @@ The group stage of the FIFA World Cup 2018 ended yesterday with Belgium defeatin
 
 {{<youtube HpQJ8rxaPi0>}}
 
-This has also been a tournament with some of the best tweets I've seen. Just have a look at this probability plot by @JPVSilva88 for possible Group F outcomes.
+This has also been a tournament with some of the best tweets I've seen. Just have a look at this probability plot for possible Group F outcomes.
 
 {{<tweet 1011967148149727234>}}
 
 Follow [@JPVSilva88](https://twitter.com/JPVSilva88), [@jburnmurdoch](https://twitter.com/jburnmurdoch), [@StatsZone](https://twitter.com/StatsZone) for such amazing updates and [@8bitfootball](https://twitter.com/8bitfootball) for some 8 bit swag !!
 
 
-I'd been searhcing for some ideas myself to do something since the tournament started, the game is full of data points and you just need curious minds to weave some together and come up with beautiful stories. I had explored this functional command line utility called [miller](https://johnkerl.org/miller/) by John Kerl. In short miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON. I wanted to share and promote it as it has been a productive tool for me and you should definitely add it to your data processing toolkit. What better opportunity than using it to explore the World Cup. 
+I'd been searhcing for some ideas myself to do something since the tournament started, the game is full of data points and you just need curious minds to weave some together and come up with beautiful stories. Sometime back, I had explored this functional command line utility called [miller](https://johnkerl.org/miller/) by John Kerl. In short miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON. I wanted to share and promote it as it has been a productive tool for me and you should definitely add it to your data processing toolkit. What better opportunity than using it to explore the World Cup. 
 
 For this post, we'll use such open source command line utilities like miller, jq (the json processor) and some R (of-course) to analyse the tournament so far and let's see if we can come up with something worth a share. For the data, we'll be using the superb API from [football-data.org](http://football-data.org/). I'll urge you to get your API key before proceeding further which can be obtained easily from this [link](https://www.football-data.org/client/register). We'll be registering for the free account as the data we get access to is somewhat sufficent for this post but you should definitely check out the full version as well. The team is doing an amazing job to get us the live updates as fast as possible. So let's get started!!
-
-Note: All scripts used above are documented in this gist. 
 
 The fixtures for the knock-outs have been finalised. So let's check who's playing whom
 
