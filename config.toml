@@ -8,7 +8,7 @@ theme = "minimo"
 disqusShortname = "apoorv74githubio"
 googleAnalytics = "UA-66023783-1"
 
-Paginate = 5
+Paginate = 10
 preserveTaxonomyNames = true
 
 enableRobotsTXT = true # generate robots.txt
