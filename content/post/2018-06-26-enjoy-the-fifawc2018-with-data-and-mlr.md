@@ -1,14 +1,19 @@
 ---
-title: 'Enjoy the #FIFAWC2018 with data and mlr'
-author: ~
-date: '2018-06-26'
-slug: enjoy-the-fifawc2018-with-data-and-mlr
-categories: []
-tags: []
-authors: []
+date: 2018-06-29T14:00:00+06:00
+title: FIFA WC 2018 - with mlr, jq and you!! 
+authors: ["muniftanjim"]
+categories:
+  - football
+tags: 
+  - command-line
+  - analysis
+slug: fifa-2018
+cover:
+  image: /images/banner_fifa18.jpg
+  caption: Kroos, from zero to hero [FIFA](https://www.fifa.com/worldcup/news/kroos-from-zero-to-hero-2966896)
+  style: full
 ---
 
---------------------------------------------
 
 The group stage of the FIFA World Cup 2018 ended yesterday with Belgium defeating England by a goal. What a tournament this is turning out to be, superb goals (Kroo's banger was the best for me), not-so-predictable results, the Asians playing well (good luck Japan), extra time surprises and who can forget those VAR stories of penalties. Here is Nordin Amrabat showing some love for the technology. 
 
