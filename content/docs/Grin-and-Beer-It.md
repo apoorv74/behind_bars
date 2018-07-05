@@ -7,8 +7,8 @@ categories:
   - Data visualisation
 slug: beer-viz
 cover:
-  image: /images/grin_and_beer_it.jpg
-  caption: Photo by Wil Stewart on [Unsplash](https://unsplash.com/)
+  image: /images/banner_beer.png
+  caption: Google Beer Map  [Google](https://www.google.co.in/search?newwindow=1&sa=X&biw=1422&bih=781&q=bangalore+beer&npsic=0&rflfq=1&rlha=0&rllag=12938395,77592356,4059&tbm=lcl&ved=0ahUKEwi02Py-kojcAhUIcCsKHahrAnwQtgMIKg&tbs=lrf:!2m1!1e2!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:9&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d103188.50049573663!2d77.65805034999994!3d12.98510055000001!3m2!1i1002!2i637!4f13.1)
   style: full
 ---
 

@@ -8,7 +8,7 @@ categories:
   - football
 slug: football-awakens
 cover:
-  image: /images/football-awakens.jpg
+  image: /images/football-awakens.png
   caption: Street Football Essence of North Kolkata by [Better Photography](http://betterphotography.in/)
   style: full
 ---

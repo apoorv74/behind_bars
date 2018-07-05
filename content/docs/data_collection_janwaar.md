@@ -9,7 +9,7 @@ tags:
   - data-collection
 slug: data-collection-janwaar
 cover:
-  image: /images/janwaar_0.jpg
+  image: /images/janwaar_0.png
   caption: Little Humans of Janwaar Castle by [Leher](http://leher.org/campaigns/little-humans-janwaar-castle/)
   style: full
 ---
