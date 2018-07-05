@@ -14,7 +14,7 @@
 {{- with .Params.cover -}}
   {{- $type := ( printf "%T" . ) -}}
   {{- $isMap := ( not ( eq $type "string" ) ) -}}
-  <meta property='twitter:image' content='
+  <meta name='twitter:image' content='
   {{- if $isMap -}}
     {{- .image | absURL -}}
   {{- else -}}
