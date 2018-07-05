@@ -1,4 +1,4 @@
-baseURL = "https://www.behindbars.netlify.com/"
+baseURL = "https://behindbars.netlify.com/"
 title = "Behind Bars"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""

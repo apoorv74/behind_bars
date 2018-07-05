@@ -22,7 +22,7 @@
   {{- end -}}'>
   {{- if $isMap -}}
     {{- with .caption -}}
-    <meta property='twitter:image:alt' content='{{ . | markdownify }}'>
+    <meta name='twitter:image:alt' content='{{ . | markdownify }}'>
     {{- end -}}
   {{- end -}}
 {{- end -}}
