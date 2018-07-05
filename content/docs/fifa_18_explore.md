@@ -9,7 +9,7 @@ tags:
   - analysis
 slug: fifa-2018
 cover:
-  image: /images/banner_fifa18.jpg
+  image: /images/shield-kriggins-twitter.png
   caption: Kroos, from zero to hero [FIFA](https://fifa.com/worldcup/news/kroos-from-zero-to-hero-2966896)
   style: full
 ---
