@@ -1,0 +1,911 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Apoorv Anand</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+	<style>
+		/********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Custom reset */
+.main-summary p, 
+#publications .item,
+#skills .item,
+#languages .item,
+#references .item,
+#interests .item{
+	margin: 0;
+}
+
+
+/****************
+*		SMARTPHONES		
+****************/
+em {
+	color: #757575;
+}
+p {
+	margin: 1em 0;
+}
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+strong {
+	font-weight: 700;
+	font-size: 1.1em;
+}
+ul {
+	margin-top: 1em; 
+}
+div.item {
+	margin: 1em 0 2em;
+	padding-bottom: 2em;
+}
+div.item:last-of-type {
+	margin: 0;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+p {
+	text-align: justify;
+}
+
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+h1 {
+	font-size: 2.5rem;
+}
+h2,
+h3 {
+	font-size: 1rem;
+}
+a {
+	color: #EB5F51;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* Layout */
+body {
+	background: #f2f2f2;
+	line-height: 1.6;
+	font-size: 13px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#resume {
+	padding: 1rem 0;
+	margin: 1rem auto;
+}
+
+#header {
+	padding: 0 1em;
+	margin-bottom: 1em;
+}
+
+#resume > header div {
+	display: table;
+	padding-left: 0.5em;
+}
+
+#resume > header div.middle {
+	padding-top: 1.5em;
+}
+
+header img {
+	display: block;
+	width: 10em;
+	border-radius: 0.275em;
+	float: right;
+	vertical-align: middle;
+}
+
+header .name {
+	line-height: 1;
+}
+
+header .label {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #757575;
+}
+
+section:not(.section) {
+	padding: .5em 1rem;
+}
+
+section#references {
+	border-bottom:none;
+}
+
+section#basics {
+	background: inherit;
+	margin-bottom: 0;
+}
+
+section#skills {
+	padding-bottom: 0;
+}
+
+section#education, 
+section#work, 
+.main-summary section {
+	padding-bottom: 1em;
+}
+
+header::after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+h2.section-title {
+	text-align: left;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #757575;
+	padding: 1em 1rem 0;
+	margin-bottom: 0.1275em;
+}
+
+.date {
+	font-weight: 700;
+	color: #757575;
+}
+
+.position, .area, .institution {
+	font-weight: 700;
+}
+
+#interests .item, #languages .item {
+	padding: 0 1em 1em 0;
+	border-bottom: none;
+}
+
+.website::before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+	content: '\f14c';
+}
+
+#profiles, #skills, #interests, #languages {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+  padding-bottom: 1em;
+}
+
+#profiles, #location {
+	box-shadow: none;
+	padding: 0;
+}
+
+#profiles .item {
+	margin: 0;
+	padding: 0;
+	padding-right: 1em;
+	border-bottom: none;
+}
+
+#interests ul {
+	margin-top: 0.5em;
+}
+
+#publications .name {
+	font-style: italic;
+}
+
+.courses li, .keywords li{
+	display: inline-block;
+	background: #f0f0f0;
+	font-size: 0.9em;
+	line-height: 1;
+	color: #333;
+	padding: 0.4em 0.8em;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+#publications .date {
+	font-weight: normal;
+	color: #000;	
+}
+
+#skills .item {
+	min-width: 15em;
+	padding: 0 .5em .8em 0;
+	border-bottom: none;
+}
+
+
+/* Skills chart */
+#skills .level .bar {
+	border: 1px solid #ddd;
+	display: block;
+	width: 10em;
+	height: 5px;
+	margin: 0em 0 1em 0;
+	position: relative;
+}
+
+#skills .level .bar::after {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	background: black;
+	height: 5px;
+}
+
+#skills .level.beginner .bar::after {
+	background: #EB5F51;
+	width: 2.5em;
+} 
+
+#skills .level.intermediate .bar::after {
+	background: #ffdf1f;
+	width: 5em;
+} 
+
+#skills .level.advanced .bar::after {
+	background: #59C596;
+	width: 7.5em;
+} 
+
+#skills .level.master .bar::after {
+	background: #5CB85C;
+	width: 10em;
+}
+
+#references .item {
+	padding-left: 1em;
+	border-left: 5px solid #EB5F51;
+}
+
+.fa.social {
+	margin-right: 0.25em;
+	font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+.google-plus {
+	color: #dd4b39;	
+}
+
+.tumblr {
+	color:#32506d;
+}
+
+.foursquare {
+	color:  #0072b1;
+}
+
+.facebook {
+	color: #3b5998;
+}
+
+.linkedin {
+	color: #007bb6;
+}
+
+.pinterest {
+	color: #cb2027;
+}
+
+.dribbble {
+	color: #ea4c89;
+}
+
+.instagram {
+	color: #517fa4;
+}
+
+.twitter {
+	color: #00aced;
+}
+
+.soundcloud { 
+	color: #ff3a00;
+}
+
+.wordpress {
+	color: #21759b;
+}
+
+.youtube {
+	color: #bb0000;
+}
+
+.github {
+	color: #171515;
+}
+
+.stack-overflow {
+	color: #828386;
+	position: relative;
+}
+
+.flickr {
+	color: #ff0084;
+}      
+
+.stack-overflow::after {
+	position: absolute;
+	left: 0;
+	content: '\f16c';
+	color: #f68a1f;
+	overflow: hidden;
+	height: 40%;
+}
+
+/******************
+*		HELPER CLASSES	
+******************/
+.fa {
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+}
+
+.clear {
+	display: table;
+	clear: both;
+}
+
+
+/****************
+*		TABLET
+****************/
+@media screen and (min-width: 602px) { 
+	
+	#resume {
+		width: 550px;
+		margin: 0 auto;
+	}
+	section > header > h3 {
+		float:left;
+	}
+	section > header > .date {
+		float: right;
+		line-height: 1.3;
+	}
+
+}
+
+
+/****************
+*		LAPTOP	
+****************/
+@media screen and (min-width: 1025px) { 
+	
+	#resume {
+		width: 650px;		
+		padding: 3em;
+		margin: 3em auto;
+		background: #fff;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	}
+
+	.section {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		margin-bottom: 1em;
+		margin-top: 1em;
+		border-bottom: 1px solid #eee;
+	}
+
+	.section:last-of-type {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+
+	section > header {
+		line-height: 1;
+		padding-bottom: 1em; 
+	}
+
+	h2.section-title {
+		line-height: 1.1;
+		padding-top: 0;
+	}
+
+	section:not(.section) {
+		width: 34.5em;
+		padding: 0 1em 1em 0;
+		margin-top:0;
+		border: none;
+	}
+
+	section p {
+		margin: 0;
+	}
+
+	section#basics {
+		width: auto;
+		padding-top: 1em;
+		padding-left: 1em;
+		padding-bottom: 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+
+	#profiles .item{
+		padding-bottom: 1em;
+	}
+
+	div {
+		padding: 0;
+	}
+
+	#skills .item {
+		padding-left:0;
+		margin-top: 0;
+	}
+
+	div.item {
+		margin-top: 0;
+		border-bottom: 1px solid #eee;
+	}
+
+}
+	</style>
+	
+
+	<body>
+		<div id="resume">
+				<header id="header">
+						<div>
+							<h1 class="name">Apoorv Anand</h1>
+							<h2 class="label">Data Scientist</h2>
+						</div>
+
+				</header>
+				
+				<section id="basics">
+					
+						<div id="location">
+							<span class="fa fa-map-marker"></span>
+							<span class="address">
+								1504/05, Bedi Nagar,
+							</span>
+							<span class="postalCode">
+								482001,
+							</span>
+							<span class="city">
+								Jabalpur
+							</span>
+							<span class="countryCode">
+								(IN),
+							</span>
+							<span class="region">
+								Madhya Pradesh
+							</span>
+						</div>
+
+					<div id="contact">
+						<div class="website">
+							<a href="https://behindbars.netlify.com">https://behindbars.netlify.com</a>
+						</div>
+						<div class="email">
+							<span class="fa fa-envelope"></span>
+							<a href="mailto:apoorv7491@gmail.com">apoorv7491@gmail.com</a>
+						</div>
+						<div class="phone">
+							<span class="fa fa-phone-square"></span>
+							+91 9916999297
+						</div>
+					</div>
+				
+
+					<div id="profiles">
+						<div class="item">
+							<span class="network fa fa-twitter twitter"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://twitter.com/APo_ORV">apo_orv</a>
+								</span>
+							</span>
+						</div>
+						<div class="item">
+							<span class="network fa fa-github github"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://github.com/apoorv74/">apoorv74</a>
+								</span>
+							</span>
+						</div>
+						<div class="item">
+							<span class="network fa fa-linkedin linkedin"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://www.linkedin.com/in/apoorvanand/">apoorvanand</a>
+								</span>
+							</span>
+						</div>
+					</div>
+				</section>
+
+				<section class="section main-summary">
+					<h2 class='section-title'>About</h2>
+					<section>
+						<p>Apoorv hails from Jabalpur. He has earned his degree in Information Technology from Jabalpur Engineering College. He is a seasoned analytics professional who has worked as a Data Scientist cum Engineer for startups, government and non-profits. His current work focuses on using data, tech, design and social science to strengthen the course of civic engagements. He aims to grow tech and data literacy in the country to enable data-driven decision making at scale. He is a firm believer of FOSS (Free and Open Source Software) and focuses some of his efforts in building a community around the R programming language.</p>
+					</section>
+				</section>
+
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Experience</h2>
+					<section id="work">
+						<header>
+							<h3 class="name">
+								SocialCops
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									December 2015
+								</span>
+								<span class="endDate">
+									- July 2018
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Data Engineer
+						</div>
+						<div class="website">
+							<a href="https://socialcops.com/">https://socialcops.com/</a>
+						</div>
+						<div class="summary">
+							<p>Joined the company in its early days when our solutions ranged from helping foundations reach their targets, tracking relief efforts in Chennai and even powering a data-driven comedy show. Data science was not the only job as we had to scale the team and resources thus helping the organisation reach its goals. I wore several hats in this stint and it taught me important skills such as mentorship and collaboration</p>
+						</div>
+						<ul class="highlights">
+							<li>Worked as a Lead Data Analyst/Data Engineer for several data engagements for the Government of India and partners such as TataTrusts, BMGF and the HANS Foundation</li>
+							<li>Lead the team to create a platform for storing and comparing governmental schemes across various factors. This helped us in creating a feature-rich database of schemes and assisting beneficiaries with the information wherever required</li>
+							<li>Internal documentation around data operations on Census, SECC, NSSO rounds and several other important open datasets released by the Government of India</li>
+							<li>Involved in the recruitment of Data Analysts and Researchers, helping the team scale from 2 to 10+ members</li>
+							<li>Created learning resources for the data team around Data Science, source code collaboration (Git), R programming and project documentation</li>
+						</ul>
+					</div>
+						<header>
+							<h3 class="name">
+								OLA cabs (ANI Technologies)
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									May 2015
+								</span>
+								<span class="endDate">
+									- December 2015
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Product Analyst
+						</div>
+						<div class="website">
+							<a href="https://www.olacabs.com/">https://www.olacabs.com/</a>
+						</div>
+						<ul class="highlights">
+							<li>Majorly worked on dissecting close to million trips a day finding patterns affecting customer behaviour</li>
+							<li>Worked with the consumer product team to identify product KPI&#x27;s, setting goals and designing a framework to capture there performance periodically</li>
+							<li>Worked with the engineering team identifying important data points to capture and then build a robust data pipeline for the analytics team for there consumption</li>
+							<li>Designed frameworks for conducting A/B tests across important consumer-facing product features and reporting there performance visually to aid in decision making</li>
+						</ul>
+					</div>
+						<header>
+							<h3 class="name">
+								Mu Sigma
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									June 2013
+								</span>
+								<span class="endDate">
+									- May 2015
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Business Analyst
+						</div>
+						<div class="website">
+							<a href="https://www.mu-sigma.com/">https://www.mu-sigma.com/</a>
+						</div>
+						<ul class="highlights">
+							<li>Part of the marketing analytics team whose responsibilities were to design and evaluate market mix models to help plan marketing budgets for a fortune 500 retailer</li>
+							<li>Designed and developed an automated and robust framework on the cloud for delivering weekly reports across a number of clients partnerships</li>
+							<li>Part of the supply chain team responsible for descriptive and predictive analytics to understand buyer behaviour and enhance operational efficiency</li>
+							<li>Involved in prototyping MuSigma&#x27;s first sports analytics tool for predicting the winning probability by hashing the team&#x27;s current performance and comparing it to similar situations from the past</li>
+						</ul>
+					</div>
+					</section>
+				</section>
+		
+				<section class="section">
+					<h2 class='section-title'>Education</h2>
+					<section id="education">
+							<header>
+									<h3 class="institution">
+										Jabalpur Engineering College
+									</h3>
+								<div class="date">
+									<span class="startDate">
+										2009
+									</span>
+									<span class="endDate">
+										- 2013
+									</span>
+								</div>
+							</header>
+							<div class="item">
+									<div class="studyType">
+										Bachelor
+									</div>
+									<div class="area">
+										Information Technology
+									</div>
+									<div>
+										<span class="fa fa-graduation-cap"></span>
+										<span class='gpa'> GPA: 76 percent</span>
+									</div>
+							</div>
+					</section>
+				</section>
+		
+			
+				<section class="section">
+					<h2 class='section-title'>Volunteer</h2>
+					<section id="volunteer">
+								<header>
+									<h3 class="company">
+										Janwaar Castle (Rural changemakers)
+									</h3>
+									<div class="date">
+										<span class="startDate">
+											June 2016
+										</span>
+										<span class="endDate">
+											- Present
+										</span>
+								</header>
+							<div class="item">
+							<div class="position">
+								Operations and Software
+							</div>
+							<div class="website">
+								<a href="https://rural-changemakers.com/">https://rural-changemakers.com/</a>
+							</div>
+							<div class="summary">
+								<p>The organisation was started by Ulrike Reinhard and almost does all its work in a small village(Janwaar) near Panna in Madhya Pradesh and hailing from the same state, I didn&#x27;t waste a second to join them in their endeavours. Till now, we have been successful in building India&#x27;s biggest skate park, organise a national level tournament for skateboarding, planned income generating avenues for villagers ranging from handicraft to home stays and conduct a village-wide survey to aid the households in receiving benefits from the state government.</p>
+							</div>
+						</div>
+								<header>
+									<h3 class="company">
+										DataKind BLR (formerly Data without Borders)
+									</h3>
+									<div class="date">
+										<span class="startDate">
+											June 2015
+										</span>
+										<span class="endDate">
+											- December 2015
+										</span>
+								</header>
+							<div class="item">
+							<div class="position">
+								Data Analyst
+							</div>
+							<div class="website">
+								<a href="https://www.datakind.org/chapters/datakind-blr">https://www.datakind.org/chapters/datakind-blr</a>
+							</div>
+							<div class="summary">
+								<p>We help non-profits working in the area of literacy, health care, etc in using technology and data across several of there initiatives. I volunteered as a Data Analyst where I worked on projects ranging from Tree Census in Bangalore to reducing pendency of court cases. This stint connected me to a lot of like-minded individuals and organisations and taught me to use Data-for-good in the country</p>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Awards</h2>
+					<section id="awards">
+						<div class="date">
+							10 November 2014
+						</div>
+						<div class="item">
+							<div class="title">
+								Spot Award
+							</div>
+							<div class="awarder">
+								Mu-Sigma
+							</div>
+							<div class="summary">
+								<p>Designing efficient and reusable code modules for automating processes thus ensuring effective delivery of results</p>
+							</div>
+						</div>
+					</section>
+				</section>
+		
+		
+				<section class="section">
+					<h2 class='section-title'>Skills</h2>
+					<section id="skills">
+						<div class="item">
+							<div class="name">
+								Data Science
+							</div>
+							<div class="level master">
+								<em>Master</em>
+								<div class="bar"></div>
+							</div>
+							<ul class="keywords">
+								<li>Data processing</li>
+								<li>Factor Analysis</li>
+								<li>Machine Learning (Feature engineering, model evaluation and development)</li>
+								<li>Bayesian Analysis</li>
+								<li>Spatial</li>
+								<li>Storyboarding</li>
+							</ul>
+						</div>
+						<div class="item">
+							<div class="name">
+								Data Engineering
+							</div>
+							<div class="level master">
+								<em>Master</em>
+								<div class="bar"></div>
+							</div>
+							<ul class="keywords">
+								<li>Parquet</li>
+								<li>Presto</li>
+								<li>Data pipelines (Airflow)</li>
+								<li>Spark</li>
+								<li>ETL</li>
+								<li>SQL</li>
+							</ul>
+						</div>
+						<div class="item">
+							<div class="name">
+								Programming
+							</div>
+							<div class="level master">
+								<em>Master</em>
+								<div class="bar"></div>
+							</div>
+							<ul class="keywords">
+								<li>Python</li>
+								<li>R</li>
+								<li>Functional Programming</li>
+								<li>Async</li>
+								<li>OOP</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Languages</h2>
+					<section id="languages">
+						<div class="item">
+							<div class="language">
+								Hindi
+							</div>
+							<div class="fluency">
+								<em>Proficient</em>
+							</div>
+						</div>
+						<div class="item">
+							<div class="language">
+								English
+							</div>
+							<div class="fluency">
+								<em>Proficient</em>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section class="section">
+					<h2 class='section-title' class='section-title'>Interests</h2>
+					<section id="interests">
+						<div class="item">
+							<div class="name">
+								Developing open source software for Analysts and Researchers
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Sports
+							</div>
+							<ul class="keywords">
+								<li>Football</li>
+								<li>Cricket</li>
+							</ul>
+						</div>
+						<div class="item">
+							<div class="name">
+								Wood Carving and Carpentry
+							</div>
+						</div>
+					</section>
+				</section>
+		
+		</div>		
+	</body>
+	
+</html>

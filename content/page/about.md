@@ -17,3 +17,5 @@ The blog is divided in two overall categories:
 As a software engineer I believe in the power of FOSS, and I hope to make positive efforts, useful for myself and the community, which has taught me everything I know.
 
 The site was created using [Blogdown](https://github.com/rstudio/blogdown) and I would like to  acknowledge the efforts of [Yihui Xie](https://github.com/yihui) and team for making it so easy to create websites within the R environment
+
+Resume [HTML](/resume/resume_aug_2018.html) - [PDF](/resume/resume_apoorv_anand_aug_2018.pdf)
