@@ -86,6 +86,6 @@ I must say that both the organisers and the speakers did a fantastic job and the
 
 A quick note to the Indian folks who are into Data Science and R programming and want to experience such conferences - 
 
-I know that we have a dearth of conferences like these in our country and attending such international conferences is not easy if our trip is not funded, by the employer or by other means, so I would just say to do your best, engage and help the community through StackOverflow, Discord channels, work and maintain open source packages, and just keep on documenting your work in a way it is reproducible and useful for others. The best way to attend such conferences is to present your own stuff, but your community contributions are of prime importance and they open door for a lot of opportunities ahead. 
+I know that we have a dearth of conferences like these in our country and attending such international conferences is not easy if our trip is not funded, by the employer or by other means, so I would just say to do your best, engage and help the community through StackOverflow, [discourse channels](http://community.rstudio.com/), work and maintain open source packages, and just keep on documenting your work in a way it is reproducible and useful for others. The best way to attend such conferences is to present your own stuff, but your community contributions are of prime importance and they open door for a lot of opportunities ahead. 
 
 > The more you give, the more you get back.  
