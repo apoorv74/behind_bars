@@ -9,7 +9,7 @@ tags:
   - rstats
 slug: attending-earl-2018
 cover:
-  image: /images/earl-best.png
+  image: /images/background-london.jpg
   caption: EARL [conference](https://www.mango-solutions.com/blog/earl-conference-2018-the-best-yet)
   style: full
 ---
