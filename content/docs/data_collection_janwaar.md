@@ -1,7 +1,7 @@
 ---
 date: 2017-09-30T14:00:00+06:00
 title: A day spent collecting data in Janwaar
-authors: ["muniftanjim"]
+authors: ["apoorv"]
 categories:
   - janwaar
 tags: 

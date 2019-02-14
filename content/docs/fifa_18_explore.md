@@ -1,7 +1,7 @@
 ---
 date: 2018-06-29T14:00:00+06:00
 title: FIFA WC 2018 - with mlr, jq and friends!! 
-authors: ["muniftanjim"]
+authors: ["apoorv"]
 categories:
   - football
 tags: 

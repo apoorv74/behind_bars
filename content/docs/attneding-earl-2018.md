@@ -1,7 +1,7 @@
 ---
 date: 2018-09-21T14:31:19+06:00
 title: Attending my first international R conference [EARL 2018] 
-authors: ["muniftanjim"]
+authors: ["apoorv"]
 categories:
   - Conferences
 tags: 

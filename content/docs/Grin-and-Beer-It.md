@@ -2,7 +2,7 @@
 date: 2015-07-30T12:31:19+06:00
 updated-on: 2017-12-25T15:19:19+06:00
 title: Grin and Beer It!!
-authors: ["muniftanjim"]
+authors: ["apoorv"]
 categories:
   - Data visualisation
 slug: beer-viz

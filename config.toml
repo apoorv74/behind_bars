@@ -46,6 +46,8 @@ recentPostsLength = 4
 hideSocialMenu = false
 showReadingTime = true
 noTermCloudShuffle = false
+showLastmod = true
+accentColor = "#ffcd00"
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
@@ -77,7 +79,7 @@ page = "/:slug/"
 
 
 [[menu.main]]
-# name = "Resume"
+# name = "Watch"
 # weight = -10
 # identifier = "resume"
 # url = "https://github.com/apoorv74/behind_bars"

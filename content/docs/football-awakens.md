@@ -3,7 +3,7 @@
 date: 2015-07-27T12:31:19+06:00
 updated-on: 2017-12-24T15:19:19+06:00
 title: Oct 12 - Birth of a footballing nation
-authors: ["muniftanjim"]
+authors: ["apoorv"]
 categories:
   - football
 slug: football-awakens

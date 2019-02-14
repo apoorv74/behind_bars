@@ -2,7 +2,7 @@
 date: 2015-09-22T12:31:19+06:00
 updated-on: 2017-12-25T15:19:19+06:00
 title: Designing a beautiful & Optimal road Trip around India
-authors: ["muniftanjim"]
+authors: ["apoorv"]
 categories:
   - Data visualisation
   - Algorithms

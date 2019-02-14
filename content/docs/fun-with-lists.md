@@ -5,7 +5,7 @@ slug: fun-with-lists
 categories:
   - programming
 tags: [R]
-authors: ["muniftanjim"]
+authors: ["apoorv"]
 toc: true
 ---
 
