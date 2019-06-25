@@ -67,7 +67,7 @@ All district (lower) courts, high courts and the supreme court have a dedicated 
 
 The image below describes a case which was heard in one of the district courts. As part of the ecourts initiative, all courts are now equipped with a _Case Information System_ (CIS), which makes it easy for the respective legal departments to store and distribute information in an organized manner. A single case comprises of more than 50 variables (data points) and information related to every hearing is recorded here (yes, its currently entered manually at periodic basis). The interim orders or final judgements passed can also be accessed from the same page.
 
-![Case details as seen on the Ecourts portal](https://cdn-images-1.medium.com/max/800/1*Sm2MNRZ7hhqPx1SarTHYTA.png)
+![Case details as seen on the Ecourts portal](https://cdn-images-1.medium.com/max/716/1*M9IOiVFwCuP6kTPNAmTNNg.png)
 
 While conducting our research, we found some issues (rather important ones) with the way information was stored that made the data processing hard and we were still not sure if we’ve written a fail-safe code.
 
