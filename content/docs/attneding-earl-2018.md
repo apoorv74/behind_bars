@@ -20,7 +20,7 @@ _EARL_ stands for __Enterprise Applications of the R Language__. It is a cross-s
 
 ### The conference - 2018
 
-I was visiting London in the same week as the conference so I got in touch with Liz Matthews who is the head of community and education at Mango solutions and thus managed to squeeze an entry just a day before the conference started and I'm glad I did that. Being only exposed to the conference content online, I wanted to experience it first hand, talk to the attendees, the organisers and meet some amazong people that we follow on social media platforms and just have a conversation with them, if possible. The agenda of the conference looked pretty interesting and I was definitely looking forward to the talks. Here are some that I managed to attend and some of there highlights. 
+I was visiting London in the same week as the conference so I got in touch with Liz Matthews who is the head of community and education at Mango solutions and thus managed to squeeze an entry just a day before the conference started and I'm glad I did that. Being only exposed to the conference content online, I wanted to experience it first hand, talk to the attendees, the organisers and meet some amazing people that we follow on social media platforms and just have a conversation with them, if possible. The agenda of the conference looked pretty interesting and I was definitely looking forward to the talks. Here are some that I managed to attend and some of there highlights. 
 
 
 [Edwina Dunn, Starcount](https://twitter.com/edwina_dunn)
@@ -29,7 +29,7 @@ I was visiting London in the same week as the conference so I got in touch with 
 
 [Garrett Grolemund, RStudio](https://twitter.com/StatGarrett)
 
-> One of the best talks of the conference, it was all about reproducibility and data science. Lots of practical examples and features of RMarkdown and also a discussion on the recent war of words on Jupyter Notebooks and the [First Notebook war](https://yihui.name/en/2018/09/notebook-war/) by Yihui Xie. Garrett is an amazing speaker and I learnt a lot by just listening to him on stage. 
+> One of the best talks of the conference, it was all about reproducibility and data science. Lot of practical examples and features of RMarkdown and also a discussion on the recent war of words on Jupyter Notebooks and the [First Notebook war](https://yihui.name/en/2018/09/notebook-war/) by Yihui Xie. Garrett is an amazing speaker and I learnt a lot by just listening to him on this stage. 
 
 
 [Jobst Loffler, Bayer Business Services](https://www.linkedin.com/in/dr-jobst-l%C3%B6ffler-120b334/?originalSubdomain=de)
@@ -54,7 +54,7 @@ I was visiting London in the same week as the conference so I got in touch with 
 
 [Andrie de Vries, RStudio](https://twitter.com/RevoAndrie)
 
-> First TensorFLow talk and it was all about how Andrie used it to classifiy support tickets, using natural language processing with recurrent layers, to informs recommendations on Zendesk ticketing system. It was also about his experience of learning a new technology, moving faster and not getting stuck in the perfectionism of things to get to results and then iterate. 
+> First TensorFLow talk and it was all about how Andrie used it to classify support tickets, using natural language processing with recurrent layers, to informs recommendations on Zendesk ticketing system. It was also about his experience of learning a new technology, moving faster and not getting stuck in the perfectionism of things to get to results and then iterate. 
 
 
 [Tim Paulden, ATASS Sports](https://www.linkedin.com/in/tim-paulden-392671ba/)
@@ -73,18 +73,18 @@ After these, there were some __lightning talks__ as well:
 - Agnes Salanki, Hotels.com, The whole is greater! A domain-specific size calculator case study at Hotels.com
 - Mike K Smith, Pfizer, Managing and deploying R packages across an organisation – Cat-herding 101
 
-I must say that both the organisers and the speakers did a fantastic job and the last talk eneded at 5 pm just as planned. Kudos to the team. 
+I must say that both the organisers and the speakers did a fantastic job and the last talk ended at 5 pm just as planned. Kudos to the team. 
 
-### Summairsing the experience: 
+### Summarising the experience: 
 
 - I feel its a challenge to summarise your talk in 15-20 mins, give time to the audience, make it interactive and encourage a healthy discussion. Attending the conference,I got to see a wide spectrum of speakers, some did this exceptionally well while everyone gave there best. This is an important skill for a speaker. 
-- Some talks were good from a theoritical perspective, but lacked real world examples and scenarios which the author/speaker faced. Including such exapmples is not always required, but whenever you do, there is an instant connect with the audience
+- Some talks were good from a theoritical perspective, but lacked real world examples and scenarios which the author/speaker faced. Including such examples is not always required, but whenever you do, there is an instant connect with the audience
 - GIF's which show code(alternate to live coding) are way better than static code images. Garrett, from RStudio, used a couple of them in his presentation and everyone was just glued to the screen, trying to understand the code and the logic. 
-- The real learning happens before and after the talk. Having one to one discussions with speakers is really important, even if you understtood everything, just appreciating the speaker after there talk goes a long way in building relationships. 
-- The R ecosystem is immense. I not only met Data Scientists, but people from a lot of different backgrounds and roles who are using it in some form or the other. Just gives you a sense of how open the community is and how easy it is for a newconmer to just enter and explore. 
+- The real learning happens before and after the talk. Having one to one discussions with speakers is really important, even if you understood everything, just appreciating the speaker after there talk goes a long way in building relationships. 
+- The R ecosystem is immense. I not only met Data Scientists, but people from a lot of different backgrounds and roles who are using it in some form or the other. Just gives you a sense of how open the community is and how easy it is for a new comer to just enter and explore. 
 - The community is amazing, yes I know this is now a cliche,  but once you start communicating, you realise how fantastic this bunch is. I was lucky to meet Mark Sellors from Mango Solutions, Sean Lopp from RStudio and several other amazing folks. 
 
-A quick note to the Indian folks who are into Data Science and R programming and want to experience such conferences - 
+A quick note to the Indian folks who want to experience such conferences - 
 
 I know that we have a dearth of conferences like these in our country and attending such international conferences is not easy if our trip is not funded, by the employer or by other means, so I would just say to do your best, engage and help the community through StackOverflow, [discourse channels](http://community.rstudio.com/), work and maintain open source packages, and just keep on documenting your work in a way it is reproducible and useful for others. The best way to attend such conferences is to present your own stuff, but your community contributions are of prime importance and they open door for a lot of opportunities ahead. 
 
