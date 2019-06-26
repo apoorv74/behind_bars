@@ -23,18 +23,20 @@ cover:
   
 > I originally wrote this article for the [CivicDataLab](https://www.civicdatalab.in/) blog on Medium. Follow their [blogroll](https://medium.com/civicdatalab) for other similar posts on Public Finance and Judiciary.
 
-- [💼 A brief on legal data systems](https://behindbars.netlify.com/docs/data_indian_judiciary/#a-brief-on-legal-data-systems)
-- [📃 An actual case document](https://behindbars.netlify.com/docs/data_indian_judiciary/#an-actual-case-document)
-- [👩🏽 People in Legal Tech Space](https://behindbars.netlify.com/docs/data_indian_judiciary/#people-in-legal-tech-space)
-- [🗃 Improving the accessibility of Judicial data](https://behindbars.netlify.com/docs/data_indian_judiciary/#improving-the-accessibility-of-judicial-data)
-- [🔓 Legal Tech and Open Source](https://behindbars.netlify.com/docs/data_indian_judiciary/#legal-tech-and-open-source)
-- [🏛 Court cases and Data Privacy](https://behindbars.netlify.com/docs/data_indian_judiciary/#court-cases-and-data-privacy)
-- [🏁 Conclusion](https://behindbars.netlify.com/docs/data_indian_judiciary/#conclusion)
-- [※ References](https://behindbars.netlify.com/docs/data_indian_judiciary/#references)
-
 **Judiciary**, _One who upholds the law,_ is one of the three pillars of the constitution and a really important one. The country has seen several instances when people exercised their power (granted to them by us citizens) and tried to alter the constitution according to their needs, and some of them might have lead to abolition of our fundamental rights, and it’ll only be correct to say that the judiciary was in their way, fighting till the very end to save our constitution. The times are tough ahead, with case pendency at an all time high, cases of judicial corruption making their way to our news feeds and our governments trying to use the judiciary the way they want. Barring all this, the time is also ripe for people to collaborate and brainstorm on these issues, try to be legally literate and take decisions independently instead of relying on the media for legal information. Access to justice is a fundamental right and it starts with us being curious to know more.
 
 Past few months have been amazing for our team as we got an opportunity to work with some of the most hands-on partners in the legal space. This is our attempt to collate all that knowledge and share some insights on the data ecosystem that empowers the legal-tech community in India
+
+
+- [💼 A brief on legal data systems](/docs/data_indian_judiciary/#a-brief-on-legal-data-systems)
+- [📃 An actual case document](/docs/data_indian_judiciary/#an-actual-case-document)
+- [👩🏽 People in Legal Tech Space](/docs/data_indian_judiciary/#people-in-legal-tech-space)
+- [🗃 Improving the accessibility of Judicial data](/docs/data_indian_judiciary/#improving-the-accessibility-of-judicial-data)
+- [🔓 Legal Tech and Open Source](/docs/data_indian_judiciary/#legal-tech-and-open-source)
+- [🏛 Court cases and Data Privacy](/docs/data_indian_judiciary/#court-cases-and-data-privacy)
+- [🏁 Conclusion](/docs/data_indian_judiciary/#conclusion)
+- [※ References](/docs/data_indian_judiciary/#references)
+
 
 ### A brief on legal data systems
 

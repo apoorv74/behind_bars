@@ -85,7 +85,7 @@ page = "/:slug/"
 # url = "https://github.com/apoorv74/behind_bars"
 
 [blackfriday]
-hrefTargetBlank = true
+hrefTargetBlank = false
 
 [languages]
 # edit this block for your own language
