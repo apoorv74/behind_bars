@@ -79,10 +79,9 @@ page = "/:slug/"
 
 
 [[menu.main]]
-# name = "Watch"
-# weight = -10
-# identifier = "resume"
-# url = "https://github.com/apoorv74/behind_bars"
+name = "Library"
+url = "https://www.notion.so/Library-A-virtual-one-for-now-41fdd04dbfe54adea78209b316decfe3"
+
 
 [blackfriday]
 hrefTargetBlank = false
