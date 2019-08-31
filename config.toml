@@ -1,10 +1,11 @@
 baseURL = "https://behindbars.netlify.com/"
 title = "Behind Bars"
+
 # for smart copyright line, leave this blank and check [params.copyright]
-copyright = ""
+copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 theme = "minimo"
-
+canonifyURLs= true
 disqusShortname = "apoorv74githubio"
 googleAnalytics = "UA-66023783-1"
 
@@ -32,10 +33,10 @@ customJS = ["js/custom.js"]
 #gopher = "https://gopherize.me/gopher/7c22cdcf584cf81ba8e1a308d0576e2016e2999f" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
-prefix = ""
-holder = "Apoorv Anand"
-startYear = "2017"
-suffix = ""
+#prefix = ""
+#holder = "Apoorv Anand"
+#startYear = "2017"
+#suffix = ""
 
 [params.settings]
 # date & time format: https://golang.org/pkg/time/
