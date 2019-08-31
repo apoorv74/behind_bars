@@ -5,17 +5,20 @@ menu: main
 weight: -210
 ---
 
-Hi!, I'm Apoorv, I work as a Data Scientist with [CivicDataLabs](https://www.civicdatalab.in/) and the blog is a place to document my work, thoughts, ideas, mistakes and in one word my journey. I hail from not-a-small-town called Jabalpur in Madhya Pradesh, and when I'm at home,I love spending my evenings just wandering near one of the many banks of river Narmada. I also volunteer with [Janwaar Castle](http://rural-changemakers.com/), aka *The Rural Change Makers*, and have learnt a lot of life lessons since my association with [Ulrike](https://twitter.com/ulrike_reinhard?lang=en) and the team in past two years. 
+**Who am I ?**
+Just another creature on this planet who thinks he can read and write. 
 
-The blog is divided in two overall categories: 
+**Why do I write ?**
+Why not, till I can, you should try as well. I'm really grateful to still have this ability and though I don't intend to reach anywhere, but this just helps me talk to myself, in a bit more structured way and question myself on things I take for granted. Listeing to and sharing stories is what i love, the simple the better, and i think writing also helps me simplify, just a bit, this utterly complex system which we're a part of. 
 
-- Life experiences
-- Data and Tech 
+**Why do you want to tell stories ?**
+Isn't it amazing. I think this is one among some really few valuable inventions that our specie has identified and developed. It can bring communities together or take them far apart, it can start a revoloution, a human life is just surrounded by stories of every kind, who we are, what we do and who we admire, is all because of stories we have heard. Well, i think its a great skill to develop, if it can be. 
 
-> In the current phase of my life, I am mostly involved with working around and building data science related software. I love [R](https://www.r-project.org/about.html), the history it has been a part of, the current R community and the future it beholds.
+Been said that, i know most of the content i write here, is not a story but ranther a pretty disconnected random article. I think its fine and all that contributes in some form or other. This is just another place where I try documenting my thoughts, and just a piece of caution: There will be a lot of Noise!! 
 
-As a software engineer I believe in the power of FOSS, and I hope to make positive efforts, useful for myself and the community, which has taught me everything I know.
+**Should you read or spend time on any of this ?**
+Never, if someone is forcing you to. But if you've somehow reached here organically, maybe you can find some inspiration wherever you are in life. I'm the most average human being with a lot of complications, I feel and if I can do anything, then you surely will. 
 
-The site was created using [Blogdown](https://github.com/rstudio/blogdown) and I would like to  acknowledge the efforts of [Yihui Xie](https://github.com/yihui) and team for making it so easy to create websites within the R environment
+You can also have a look around this small [library](https://www.notion.so/Library-A-virtual-one-for-now-41fdd04dbfe54adea78209b316decfe3) we have here, and do let me know, if you find anything interesting in these virtual shelves. 
 
-
+Thanks for your time .. 
