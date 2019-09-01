@@ -11,15 +11,17 @@ Just another creature on this planet who thinks he can read and write.
 
 **Why do I write ?**
 
-Why not, till I can, you should try as well. I'm really grateful to still have this ability and though I don't intend to reach anywhere, but this just helps me talk to myself, in a bit more structured way and question myself on things I take for granted. 
+Why not, you should try as well and I'm really grateful to have this ability. More than anything else, it  helps to structure the not-so-random thoughts and ideas which our notorious mind generates every second. 
 
-Listening to and sharing stories is what i love, the simple the better, and i think writing also helps me simplify, just a bit, this utterly complex system which we're a part of. 
+Another reason, and this is important, it let's me try and experiment with all the latest documentation tools available to us today. So, if you're looking for a feedback, you know who to talk to 😎
 
-**Why do you want to tell stories ?**
+**What will you write about ?**
 
-Isn't it amazing. I think this is one among some really few valuable inventions that our species has identified and developed. It can bring communities together or take them far apart, it can start a revolution, a human life is just surrounded by stories of every kind, who we are, what we do and who we admire, is all because of stories we have heard. Well, its a great skill to practice and develop, if possible. 
+Stories, of all kind. Aren't they amazing. I think storytelling is one of the 2 valuable inventions, other being the 🚲, that our species have identified and developed. It can bring communities together or take them far apart, it can also start and end a revolution, or it can just bring a smile on your face or fill your eyes with tears of joy and sorrow. A human life is just surrounded by stories of every kind, who we are, what we do and who we admire, is all because of stories we have heard. Well, its a great skill to practice and develop, if possible. 
 
-Having said that, i am aware that most content here, is not a story, or in form of a story,but rather a collection of disconnected and random article. I think its fine and all that contributes in some form or other. This is just another place where I try documenting my thoughts, and just a bit of caution: *There will be a lot of Noise!! *
+Having said that, i am aware that most content here, is not a story, or in form of a story,but rather a collection of disconnected random articles. I think its fine and all that contributes in some form or other. This is just another place where I try documenting my thoughts, and a cautionary advice:
+
+> There will be a lot of Noise!!
 
 **Should you read or spend time on any of this ?**
 
