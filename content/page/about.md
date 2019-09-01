@@ -19,7 +19,9 @@ Another reason, and this is important, it let's me try and experiment with all t
 
 Well, its tough to reason even if our existence has purpose, this is just a blog. But a bit of clarity helps.  
 
-Our everyday life is filled with stories and narratives and we know that they lead us in various directions. Which direction we're headed depends on whom we trust and whose thoughts we resonate with. Maybe, this leads me to a community where there is trust, equality and empathy. We're nothing without our communities and these communities are not restricted with man made borders and boundaries but are connected at a deeper level and it is where we will find peace. 
+Our everyday life is filled with stories and narratives and we know that they lead us in various directions. Which direction we're headed depends on whom we trust and whose thoughts we resonate with. 
+
+Maybe, all this leads me to a place where there is trust, equality and empathy. I do hope that these communities are not restrained with the boundaries which we've constructed all around us, but are connected at a deeper level, where we don't worry about our future as we know that there is a community that will be present and will share all that is required. 
 
 **What to expect from this blog**
 
@@ -36,7 +38,7 @@ Having said that, i am aware that most content here, is not a story, or in form 
 
 **Should you read or spend time on any of this ?**
 
-Never, if you're forced to do this. But if you've somehow reached here organically, maybe you can find some inspiration wherever you are in life. I'm the most average human being with a lot of complications, and if I can do anything, then you surely will. 
+Never, if you're forced to do this. But if you've somehow reached here organically, maybe you can find some inspiration wherever you are in life. I'm the most average human being with a lot of complications, and if I can do anything, then you have no reason to doubt yourself. 
 
 You can also have a look around this small [library](https://www.notion.so/Library-A-virtual-one-for-now-41fdd04dbfe54adea78209b316decfe3) we have here, and do let me know, if you find anything interesting in these virtual shelves. 
 
