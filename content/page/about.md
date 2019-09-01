@@ -15,9 +15,20 @@ Why not, you should try as well and I'm really grateful to have this ability. Mo
 
 Another reason, and this is important, it let's me try and experiment with all the latest documentation tools available to us today. So, if you're looking for a feedback on any of them, you now know who to talk to 😎
 
-**What will you write about ?**
+**Any other purpose ?**
 
-Stories, of all kind. Aren't they amazing. I think storytelling is one of the 2 valuable inventions, other being the 🚲, that our species have identified and developed. It can bring communities together or take them far apart, it can also start and end a revolution, or it can just bring a smile on your face or fill your eyes with tears of joy and sorrow. A human life is just surrounded by stories of every kind, who we are, what we do and who we admire, is all because of stories we have heard. Well, its a great skill to practice and develop, if possible. 
+Well, its tough to reason even if our existence has purpose, this is just a blog. But a bit of clarity helps.  
+
+Our everyday life is filled with stories and narratives and we know that they lead us in various directions. Which direction we're headed depends on whom we trust and whose thoughts we resonate with. Maybe, this leads me to a community where there is trust, equality and empathy. We're nothing without our communities and these communities are not restricted with man made borders and boundaries but are connected at a deeper level and it is where we will find peace. 
+
+**What to expect from this blog**
+
+There is a big 'L' sign on the blog, which means I am a lifelong learner of the art of writing and sharing better stories and this is just the start of this journey. So, expect nothing, but i hope you find something here which is useful, in some form or the other. 
+
+
+**Why stories?**
+
+Aren't they amazing. I think storytelling is one of the 2 valuable inventions, other being the 🚲, that our species have identified and developed. It can bring communities together or take them far apart, it can also start and end a revolution, or it can just bring a smile on your face or fill your eyes with tears of joy and sorrow. A human life is just surrounded by stories of every kind, who we are, what we do and who we admire, is all because of stories we have heard. Well, its a great skill to practice and develop, if possible. 
 
 Having said that, i am aware that most content here, is not a story, or in form of a story,but rather a collection of disconnected random articles. I think its fine and all that contributes in some form or other. This is just another place where I try documenting my thoughts, and a cautionary advice:
 
