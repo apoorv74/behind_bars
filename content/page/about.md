@@ -13,7 +13,7 @@ Just another creature on this planet who thinks he can read and write.
 
 Why not, you should try as well and I'm really grateful to have this ability. More than anything else, it  helps to structure the not-so-random thoughts and ideas which our notorious mind generates every second. 
 
-Another reason, and this is important, it let's me try and experiment with all the latest documentation tools available to us today. So, if you're looking for a feedback, you know who to talk to 😎
+Another reason, and this is important, it let's me try and experiment with all the latest documentation tools available to us today. So, if you're looking for a feedback on any of them, you now know who to talk to 😎
 
 **What will you write about ?**
 
