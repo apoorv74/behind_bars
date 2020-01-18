@@ -17,4 +17,5 @@ slug: watch
 1.  [Poverty isn't a lack of character; it's a lack of cash](https://www.ted.com/talks/rutger_bregman_poverty_isn_t_a_lack_of_character_it_s_a_lack_of_cash/discussion) | **TED** | 2019-02-14
 2.  [How economic inequality harms societies](https://www.ted.com/talks/richard_wilkinson) | **TED**  | 2019-02-14
 3. [So you want to be a wizard](https://jvns.ca/blog/so-you-want-to-be-a-wizard/) | **Julia Evans - SRECon** | 2019-02-16
-4. ["The Human Predicament"](https://jvns.ca/blog/so-you-want-to-be-a-wizard/) | **Nate Hagens - The Resilience Gathering** | 2019-07-02
+4. ["The Human Predicament"](https://www.youtube.com/watch?v=MNzLkdr7UIU) | **Nate Hagens - The Resilience Gathering** | 2019-07-02
+4. [Systems Thinking for a Better World](https://www.youtube.com/watch?v=0QtQqZ6Q5-o) | **Peter Senge - Aalto Systems Forum 2014** | 2020-01-19
