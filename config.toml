@@ -1,13 +1,11 @@
-baseURL = "https://behindbars.netlify.com/"
+baseURL = "https://behindbars.netlify.app/"
 title = "Behind Bars"
 
 # for smart copyright line, leave this blank and check [params.copyright]
-copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+copyright = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 theme = "minimo"
 canonifyURLs= true
-disqusShortname = "apoorv74githubio"
-googleAnalytics = "UA-66023783-1"
 
 Paginate = 10
 preserveTaxonomyNames = true
@@ -18,6 +16,7 @@ rssLimit= 10
 
 # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
 pygmentsCodefences = true
+enableEmoji = true
 
 # Missing translations will default to this content language
 defaultContentLanguage = "en"
@@ -29,46 +28,41 @@ title404 = "Nothing's here!"
 [params.assets]
 favicon = "favicon.ico"
 customCSS = ["css/custom.css"]
-customJS = ["js/custom.js"]
-#gopher = "https://gopherize.me/gopher/7c22cdcf584cf81ba8e1a308d0576e2016e2999f" # used in 404 template ( Generator: https://gopherize.me )
-
-[params.copyright]
-#prefix = ""
-#holder = "Apoorv Anand"
-#startYear = "2017"
-#suffix = ""
 
 [params.settings]
 # date & time format: https://golang.org/pkg/time/
 dateFormat = "2006, Jan 02"
 listDateFormat = "2006, Jan 02"
+archiveDateFormat = "Jan 02"
 hideEntryNavigation = ["page"] # boolean / array of sections
-recentPostsLength = 4
-hideSocialMenu = false
+hideEntryMeta = ["page"] # boolean / array of sections
 showReadingTime = true
-noTermCloudShuffle = false
 showLastmod = true
+taxonomyCloudShuffle = true
 accentColor = "#ffcd00"
+hideMainMenu = false
 
-[params.opengraph.facebook]
-admins = [] # array of Facebook IDs
-appID = ""
-pageID = ""
+[params.sidebar]
+enable = true
 
-[params.opengraph.twitter]
-page = "apo_orv" # Twitter page username
+[params.widgets]
+header = ["breadcrumbs"]
+homepage = ["recent_posts"]
+footer = ["social_menu"]
 
 [params.seo]
 # Title Separator: - – — · • * ⋆ | ~ « » < >
-titleSeparator = "•"
+titleSeparator = "-"
 
 [params.social]
 email = "apoorv7491@gmail.com"
 github = "apoorv74"
-twitter = "apo_orv"
+
+[params.comments]
+enable = false
 
 [params.social.config]
-platforms = ["github","twitter","email"]
+platforms = ["github","email"]
 
 [taxonomies]
 author = "authors"
@@ -78,25 +72,9 @@ tag = "tags"
 [permalinks]
 page = "/:slug/"
 
-
-[[menu.main]]
-name = "Library"
-url = "https://www.notion.so/Library-A-virtual-one-for-now-41fdd04dbfe54adea78209b316decfe3"
-
-
-[blackfriday]
-hrefTargetBlank = false
-
 [languages]
 # edit this block for your own language
 [languages.en]
 lang = "en"
 languageName = "English"
 weight = 1
-
-[outputs]
-home = [ "HTML", "RSS"]
-
-[outputFormats.RSS]
-mediatype = "application/rss"
-baseName = "feed"
