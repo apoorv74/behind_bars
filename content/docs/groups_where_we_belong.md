@@ -1,6 +1,6 @@
 ---
-  date: 2020-07-26
-title: The groups where we belong ?
+date: 2020-07-26
+title: The groups where we belong
 authors: ["apoorv"]
 categories:
   - Social
