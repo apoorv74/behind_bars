@@ -67,8 +67,7 @@ In our country, people usually come together (more often than other events) duri
 
 Can we, with the same passion and intensity, also come together to demand social justice for all, demand transparency from the ones who govern us and create institutions that help our democracy to thrive and not die. We'll keep searching for an answer through our work.
 
-> “Have patience with everything that remains unsolved in your heart.
-    > ...live in the question.”
+> “Have patience with everything that remains unsolved in your heart....live in the question.”
 
 ― Rainer Maria Rilke
 
@@ -78,5 +77,3 @@ So, coming back to our original question on what makes it difficult for me to de
 This may sound narcissistic, but the more we start to observe and question, the easier it will be for people like me to define and do what we love to do. It's always a collaborative effort and we need people with all the skills one can imagine. Together we can create the society that we would all like to be a part of. 
 
 Till then, happy struggling 🙂
-
-###### tags: `behind-bars`, `blog`
