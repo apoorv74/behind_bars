@@ -26,7 +26,7 @@ This time, the second option listed above was sufficient and somehow everything 
 
 In this particular conversation, I knew that the other person is a carpenter who loves to work with wood and create things that are useful in ways more than one. He didn't need to explain his work. But, I'm aware that a lot of people find it difficult to understand what I do, and in such discussions I often tend to rate my response and its usually a bad rating. Responses that lead to meaningful conversations are rare, even with people who, I feel, have some context and I'm not required to explain the details. 
 
-I'll list out a few things that should capture the essence of what my team does. The emphasis here is on the *'Team'* and *'We'*. Everything in this list (and the work which might be not listed here, but it possible for us to do these things in the first place) is hard, unclear, controlled by a powerful few and always in dearth of all kind of resources. Success rate is low, so are the days where you feel happy, content and satisfied with the work. Power, strength energy and resources to do these things comes from the collective and it is (*the collective*) the machinery that make our clocks tick. 
+I'll list out a few things that should capture the essence of what my team does. The emphasis here is on  *'Team'* and *'We'*. 
 
 - We create diverse and inclusive spaces that lead to the creation of tools for people to exercise their rights, most importantly the right to information
 - We help people understand the way governance is supposed to work (at-least theoretically)
@@ -34,7 +34,7 @@ I'll list out a few things that should capture the essence of what my team does.
 - We create bridges between the citizens and the pillars of our constitution (legislature, executive & the judiciary)
 - We demand more accessible, responsible and ethical tools, processes and practices from the government especially to serve the not-so-privileged sections of our society
 
-Can these ideas be communicated and understood as easily as we understand wood working ? Will people understand this in a way they understand the work of a doctor, lawyer, engineer or a business-person in their localities? 
+Everything in this list is hard, unclear, controlled by a powerful few and always in dearth of all kind of resources. Success rate is low, so are the days where you feel happy, content and satisfied with the work. Power, strength energy and resources to do these things comes from the collective and it is (*the collective*) the machinery that make our clocks tick. 
 
 Some common questions that we get during such conversation (and the knee-jerk response in my head):
 
@@ -52,7 +52,7 @@ Earlier, I used to believe that whatever we do should be the job of the state (g
 * We need people who demand more transparency and access to information, are curious, get anxious when they don't know how they're being controlled and more anxious when they see the government getting more and more into their lives in one way or the other. 
 * We need people who value democracy and can channelize the frustration with our current systems at the right places to create something that they believe in. 
  
-*This is a role to empower people in ways more than one.* 
+*This is a role to empower people.* 
 
 Here, I would like to cite a paragraph from '[A civic technologist's practice guide](https://cydharrell.com/book/)' written by [Cyd Harrell](https://cydharrell.com/)
 
