@@ -74,6 +74,6 @@ Can we, with the same passion and intensity, also come together to demand social
  
 So, coming back to our original question on what makes it difficult for me to define the work I do ? A large part is my inability to articulate, but what also contributes is the demand from the society to reflect, understand and listen to all that is happening around. Isn't this a reasonable demand ? Or we believe that everything is fine and under control and we dont want to change anything, this is the happiest, peaceful and content our society (not just a priviledged few) can be and there is no room for improvement ?
 
-This may sound narcissistic, but the more we start to observe and question, the easier it will be for people like me to define and do what we love to do. It's always a collaborative effort and we need people with all the skills one can imagine. Together we can create the society that we would all like to be a part of. 
+This may sound narcissistic, but the more we start to observe and question, the easier it will be for people like me to define and do what we love to do. It's always a collaborative effort and we need people with all the skills one can imagine.  
 
-Till then, happy struggling 🙂
+I hope I come up with a better explanation next time around ...
