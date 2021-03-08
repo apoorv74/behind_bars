@@ -1,6 +1,14 @@
-# Open Data Day, 2021. Chronicling my [Open Data] journey. 
+---
+date: 2021-03-07
+title: Open Data Day, 2021. The Open Data journey.
+authors: ["apoorv"]
+categories:
+  - Open Data
+toc: false
+slug: open-data-day-2021
+---
 
-## Open Data Day ? What about it ?
+### Open Data Day ? What about it ?
 
 Yet another day to celebrate, is it ? Well for some of us, it surely is. 
 
@@ -8,11 +16,11 @@ Yet another day to celebrate, is it ? Well for some of us, it surely is.
 
 But why are people interested in spending their weekends on this ? What drives them ? What are the incentives ? I don't know, maybe articulating my journey might help ?
 
-## Journey - When I started ..
+### Journey - When I started ..
 
 My professional journey started with working on datasets that were owned by private corporations. I don't remember having any conversations with my colleagues on anything close to open data. This was back in 2013. I started to find more interest in this concept when I joined [DataKind BLR](https://www.datakind.org/chapters/datakind-blr) as a volunteer. This was a random and a self-centered decision to join. I might have known a few colleagues, maybe I joined to learn more skills to work with data, maybe see how such communities work, etc. Nothing to do with open data. But Datakind helped me in learning more about the things we can do with data and the kind of questions we can answer with public datasets. This was almost 3 years after I started my professional career. 
 
-## Open Data - Flashback
+### Open Data - Flashback
 
 Open data, especially *Open Government Data* was starting to take some well-defined shape in the later part of the first decade of the twenty first century in India and other parts of the world. A few key events:
 
@@ -46,7 +54,7 @@ A few open data advocates were quite active in India as well, raising their conc
 
 That was a not-so-quick recap. We wont be wrong in assuming that it wasn't a smooth sailing ride for open data advocates. Concerns have been raised about whether open data will solve or change the world, is this a tool for the already privileged and what is the boundary for public officials to be open about their activities to the public. Lawrence Lessig, who attended the Sebastopol meeting wrote a piece titled [Against Transparency](https://newrepublic.com/article/70097/against-transparency). This [article](https://www.globalintegrity.org/2009/10/14/post-475/) from the Global Integrity is a good break down of his critiques with valid reasons on why opening up data is not that bad as it is made to sound. 
 
-## Open Data - Present
+### Open Data - Present
 
 So, India already had an open data portal by the time I started my professional career. We're just a year away from completing a decade to the launch of NDSAP and our Open Government Portal. Where are we now ? What is the impact of these policies ? Do we have more data, better data, inclusive policies ? Are we still where we were 10 years back in terms of our systems of data and information?  
 
@@ -73,13 +81,13 @@ There are important lessons to learn for all:
 
 But change only happens whenever people are able to see an incentive. Whether they are a student, a bureaucrat, politician, employee or someone who runs their own business. We need to advocate for transparency and for better standards. Not accept whatever is thrown at us in the name of openness. Work with our representatives, educate them and also hold them accountable, not with opinions but facts. Strengthen our civil society by building capacity for data driven advocacy. We need to demand default disclosure for all information that is unavailable. 
 
-## The Journey - Continued .. 
+### The Journey - Continued .. 
 
 So, now let me come back to the year 2016 when I was still new to Open Data and was figuring our answers to what it means, who creates it and who uses it. Later that year, I joined [SocialCops](https://socialcops.com/). More than working with open data it was the lure of working on a few public policy challenges through data and tech. I got a chance to collaborate with the government on a a few pilot projects and to work with a few public databases. That stint helped me in learning about the challenges we face in creating, curating and maintaining public datasets. Meanwhile, a few friends from DataKind got together and collaborated with the [Centre for Budget and Governance Accountability](https://www.cbgaindia.org) to create [OpenBudgetsIndia](https://openbudgetsindia.org/) which is an open source platform created with an objective to increase the access to central and state budget documents by converting them to machine readable formats from PDF's. A massive effort from the team and we've managed to sustain it and keep it updated by adding more datasets, improving the documentation, making it easier for people to understand budget data, working with the state governments and advocating the need to release their budget documents in machine readable formats and now we're trying to [add a layer of public procurement data](https://hp.openbudgetsindia.org/#/procurement/analysis) through our recent collaboration with the team at [Open Contracting Partnership](https://www.open-contracting.org/).   
 
 Our DataKind experience taught us a lot on working with CSO's. Orgs that want to utilise the potential of open datasets. We also learned that models such as DataKind are useful for small pilot projects, when an org wants to test an idea, to develop something small and experiment. But for long term projects such as OBI, we need continuous efforts by a team over a longer term. With that experience, our network and with the support of our partners, a couple of volunteers who started and lead the OBI initiative decided to register an organisation in 2018 by the name [CivicDataLab](https://civicdatalab.in/). I joined them the same year to be able to collaborate on similar initiatives which are targeted towards better access to information. 
 
-## Open Data collaborations with CivicDataLab 
+### Open Data collaborations with CivicDataLab 
 
 Our work at OBI opened up a lot of doors for us to do similar work in other domains. One such area was the Law and Justice ecosystem which never seems to show up whenever we talk about open data.  
 Over the last couple of years, I've had a chance to learn more about this ecosystem and understand the feasibility of opening up datasets in the sector. A few projects we've been involved with since:
@@ -94,7 +102,7 @@ Other than *Law and Justice* and *Public Finance*, we're trying to doing similar
 
 Recently, we released the [State of the FOSS](https://state-of-foss.in/) report, where we worked with the community to chronicle the journey of free and open source software movement in India and also looked at the challenges faced by the open source community. The report suggests a road map for the different stakeholders involved to advance the work on FOSS movement in India in key areas such as Education, Businesses and Government.
 
-## The Journey - Road Ahead .. 
+### The Journey - Road Ahead .. 
 
 This is where I am today and here are a few things I look forward to:
 - A lot more to learn and unlearn. 
@@ -104,7 +112,7 @@ This is where I am today and here are a few things I look forward to:
 - To work with our partners on and building capacity on conducting reproducible research.
 - Sharing some more inspiring examples by the next Open Data Day 🙂
 
-## Do I have the answers now ?
+### Do I have the answers now ?
 
 Not sure. Open Data is hard, opinionated and political. There are issues of equity, access, availability and using it for ways that were not intended. What I know for sure is this - The ideas of open data are not just limited to techies or the government and it should never be that way. It all starts with asking questions, finding and validating facts, reporting inconsistencies if we find any and sharing whatever we've learned in the process. It's as easy as that. Maybe curiosity and the realisation that even the smallest change matters in moving the collective is what drives all of this. I'll keep searching for answers.   
 
