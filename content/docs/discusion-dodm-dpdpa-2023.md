@@ -47,7 +47,7 @@ Since this process will only be relevant for a selected few SPOs, the challenge 
 
 At the end, all panel members agreed that both **Right to Information** and **Data Privacy** are important tools for any society in this day and age. A question which we all have to grapple with is how can we strike the right balance between the two. This will be an iterative process. More open discussions and diverse participation will help us in figuring out a way forward. 
 
-Someone also took amazing taking sketch notes for the session.
+Here is a sketched summary of the session (Really good work by the creator to capture the insights)
 
 ![](../../static/images/sketch-notes-dodm-isdm.jpg)
 
