@@ -13,7 +13,7 @@ slug: discussion-dodm-dpdpa-2023
 
 I was part of a panel discussion on the implications of the **Digital Personal Data Protection Act, 2023 (DPDPA) for Social Purpose Organisations (SPO's)**. This session was organised as part of [Dialogues on Development Management (DoDM)](https://dodm.isdm.org.in/) event by the [Indian School of Development Management](https://www.isdm.org.in/) on September 20th, 2023 in New Delhi. I was sharing the stage with [Anjali Bhardwaj](https://twitter.com/AnjaliB_) (NCPRI, [SNS](https://www.snsindia.org/about/)), [Apar Gupta](https://in.linkedin.com/in/apar1984) (Founder Director at Internet Freedom Foundation) and [Sridhar Pabbisetty](https://mitwpu.edu.in/faculty/sridhar-pabbisetty-) (MIT School of Government) and the discussion was moderated by Anumita Raj (eGov Foundation). Here are the notes from our discussion. 
 
-![](../../static/images/cover-dodm-isdm.jpg)
+![Session Cover Image](/static/images/cover-dodm-isdm.jpg)
 
 The first question for us was to discuss whether SPO's are prepared for this act or not ? The answer was a unanimous "No, the organisations are not ready yet". A few key points highlighted here were: 
 
@@ -49,7 +49,7 @@ At the end, all panel members agreed that both **Right to Information** and **Da
 
 Here is a sketched summary of the session (Really good work by the creator to capture the insights)
 
-![](../../static/images/sketch-notes-dodm-isdm.jpg)
+![Sketch Notes](/static/images/sketch-notes-dodm-isdm.jpg)
 
 A few good articles and other resources I found while preparing for this session.
 
