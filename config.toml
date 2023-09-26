@@ -64,6 +64,12 @@ enable = false
 [params.social.config]
 platforms = ["github","email"]
 
+[[menu.main]]
+name = "Medium"
+weight = -10
+identifier = "work-blog"
+url = "https://medium.com/@APo_ORV"
+
 [taxonomies]
 author = "authors"
 category = "categories"
