@@ -17,8 +17,6 @@ I was part of a panel discussion on the implications of the **Digital Personal D
 
 Here are the notes from our discussion. 
 
-![Session Cover Image](/images/cover-dodm-isdm.jpg)
-
 The first question for us was to discuss whether SPO's are prepared for this act or not ? The answer was a unanimous "No, the organisations are not ready yet". A few key points highlighted here were: 
 
 **Compliance will be a resource intensive process** -  Being compliant to DPDPA will require organisations to allocate a lot of resources. It's getting harder for organisations to get certify under the Foreign Contribution Regulation Act (FCRA) which facilitates acceptance and utilization of foreign contribution. This will further delay the SPOs in being compliant under this act. 
