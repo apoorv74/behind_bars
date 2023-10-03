@@ -11,7 +11,11 @@ toc: false
 slug: discussion-dodm-dpdpa-2023
 ---
 
-I was part of a panel discussion on the implications of the **Digital Personal Data Protection Act, 2023 (DPDPA) for Social Purpose Organisations (SPO's)**. This session was organised as part of [Dialogues on Development Management (DoDM)](https://dodm.isdm.org.in/) event by the [Indian School of Development Management](https://www.isdm.org.in/) on September 20th, 2023 in New Delhi. I was sharing the stage with [Anjali Bhardwaj](https://twitter.com/AnjaliB_) (NCPRI, [SNS](https://www.snsindia.org/about/)), [Apar Gupta](https://in.linkedin.com/in/apar1984) (Founder Director at Internet Freedom Foundation) and [Sridhar Pabbisetty](https://mitwpu.edu.in/faculty/sridhar-pabbisetty-) (MIT School of Government) and the discussion was moderated by Anumita Raj (eGov Foundation). Here are the notes from our discussion. 
+I was part of a panel discussion on the implications of the **Digital Personal Data Protection Act, 2023 (DPDPA) for Social Purpose Organisations (SPO's)**. This session was organised as part of [Dialogues on Development Management (DoDM)](https://dodm.isdm.org.in/) event by the [Indian School of Development Management](https://www.isdm.org.in/) on September 20th, 2023 in New Delhi. I was sharing the stage with [Anjali Bhardwaj](https://twitter.com/AnjaliB_) (NCPRI, [SNS](https://www.snsindia.org/about/)), [Apar Gupta](https://in.linkedin.com/in/apar1984) (Founder Director at Internet Freedom Foundation) and [Sridhar Pabbisetty](https://mitwpu.edu.in/faculty/sridhar-pabbisetty-) (MIT School of Government) and the discussion was moderated by Anumita Raj (eGov Foundation). 
+
+{{<youtube EghZUvuTQOw>}}
+
+Here are the notes from our discussion. 
 
 ![Session Cover Image](/images/cover-dodm-isdm.jpg)
 
