@@ -18,7 +18,7 @@ The **`pub capital of India`**, a moniker the city earned in the 1990s for the s
 
 
 ### Presenting to you the best pubs in Bangalore
-<img src="/images/beer-viz.png" title="Best pubs in Bangalore" />
+![Best pubs in Bangalore](/images/beer-viz.png)
 
 Any favourites ?
 
