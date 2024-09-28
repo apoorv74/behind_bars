@@ -84,3 +84,8 @@ page = "/:slug/"
 lang = "en"
 languageName = "English"
 weight = 1
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+        unsafe=true
