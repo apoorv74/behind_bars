@@ -68,7 +68,7 @@ platforms = ["github","email"]
 name = "Medium"
 weight = -10
 identifier = "work-blog"
-url = "https://medium.com/@APo_ORV"
+url = "https://medium.com/@apoorv-anand"
 
 [taxonomies]
 author = "authors"
