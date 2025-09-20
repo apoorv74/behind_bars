@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+    <head>
+        <title>Miniflux</title>
+        <dateCreated>Sat, 20 Sep 2025 07:16:37 UTC</dateCreated>
+    </head>
+    <body>
+        <outline text="AI">
+            <outline title="Cold Takes" text="Cold Takes" xmlUrl="https://www.cold-takes.com/rss/" htmlUrl="https://www.cold-takes.com/rss/" type="rss"></outline>
+            <outline title="Dario Amodei (Anthropic)" text="Dario Amodei (Anthropic)" xmlUrl="https://kill-the-newsletter.com/feeds/jfidjyz01hce5mk7bpot.xml" htmlUrl="https://kill-the-newsletter.com/feeds/jfidjyz01hce5mk7bpot.xml" type="rss"></outline>
+            <outline title="Peter Steinberger" text="Peter Steinberger" xmlUrl="https://steipete.me/rss.xml" htmlUrl="https://steipete.me/" type="rss"></outline>
+        </outline>
+        <outline text="Artists">
+            <outline title="Aditi Rao - Writing" text="Aditi Rao - Writing" xmlUrl="https://kill-the-newsletter.com/feeds/1kzrs3q7ib30hycdzpof.xml" htmlUrl="https://kill-the-newsletter.com/feeds/1kzrs3q7ib30hycdzpof.xml" type="rss"></outline>
+            <outline title="Austin Kleon" text="Austin Kleon" xmlUrl="https://austinkleon.com/feed/" htmlUrl="https://austinkleon.com" type="rss"></outline>
+            <outline title="Craig Mod — Writer + Photographer" text="Craig Mod — Writer + Photographer" xmlUrl="https://craigmod.com/index.xml" htmlUrl="https://craigmod.com/" type="rss"></outline>
+        </outline>
+        <outline text="Books">
+            <outline title="The Open Library Blog" text="The Open Library Blog" xmlUrl="https://blog.openlibrary.org/feed/" htmlUrl="https://blog.openlibrary.org" type="rss"></outline>
+        </outline>
+        <outline text="Cycling">
+            <outline title="Rivendell Bicycle Works - Blahg - Grant&#39;s Blog" text="Rivendell Bicycle Works - Blahg - Grant&#39;s Blog" xmlUrl="http://rivbike.com/blogs/grant-petersens-blog.atom" htmlUrl="http://rivbike.com/blogs/grant-petersens-blog.atom" type="rss"></outline>
+            <outline title="rivendell-bicycles" text="rivendell-bicycles" xmlUrl="https://kill-the-newsletter.com/feeds/h7j3i2srnmwo1ycviy7u.xml" htmlUrl="https://kill-the-newsletter.com/feeds/h7j3i2srnmwo1ycviy7u.xml" type="rss"></outline>
+            <outline title="The Woods Cyclery - Journal" text="The Woods Cyclery - Journal" xmlUrl="http://thewoodscyclery.co.uk/blogs/blog.atom" htmlUrl="http://thewoodscyclery.co.uk/blogs/blog.atom" type="rss"></outline>
+        </outline>
+        <outline text="Data">
+            <outline title="Feed from https://elevanth.org/" text="Feed from https://elevanth.org/" xmlUrl="https://feedmaker.fly.dev/feed/?url=https%3A%2F%2Felevanth.org%2F&amp;feed_title=&amp;selector_item=ul+li&amp;selector_title=li+a&amp;selector_description=li&amp;selector_link=li+a" htmlUrl="https://feedmaker.fly.dev/feed/?url=https%3A%2F%2Felevanth.org%2F&amp;feed_title=&amp;selector_item=ul+li&amp;selector_title=li+a&amp;selector_description=li&amp;selector_link=li+a" type="rss"></outline>
+            <outline title="Andrew Heiss&#39;s blog" text="Andrew Heiss&#39;s blog" xmlUrl="https://www.andrewheiss.com/atom.xml" htmlUrl="https://www.andrewheiss.com/atom.html" type="rss"></outline>
+            <outline title="beautiful public data - john keegan" text="beautiful public data - john keegan" xmlUrl="https://kill-the-newsletter.com/feeds/6sx147s8p04fusv3r7eh.xml" htmlUrl="https://kill-the-newsletter.com/feeds/6sx147s8p04fusv3r7eh.xml" type="rss"></outline>
+            <outline title="Data For India" text="Data For India" xmlUrl="https://www.dataforindia.com/rss/" htmlUrl="https://www.dataforindia.com/rss/" type="rss"></outline>
+            <outline title="Data Is Plural" text="Data Is Plural" xmlUrl="https://data-is-plural.github.io/newsletter-archive/feeds/dip.rss" htmlUrl="https://data-is-plural.github.io/newsletter-archive/feeds/dip.rss" type="rss"></outline>
+            <outline title="Derek Willis" text="Derek Willis" xmlUrl="https://thescoop.org/blog.xml" htmlUrl="https://www.thescoop.org/blog.html" type="rss"></outline>
+            <outline title="kieranhealy.org" text="kieranhealy.org" xmlUrl="https://kieranhealy.org/index.xml" htmlUrl="https://kieranhealy.org/" type="rss"></outline>
+            <outline title="Open Data Camp UK" text="Open Data Camp UK" xmlUrl="http://odcamp.uk/feed" htmlUrl="http://odcamp.uk/feed" type="rss"></outline>
+            <outline title="Our World in Data" text="Our World in Data" xmlUrl="http://ourworldindata.org/atom.xml" htmlUrl="http://ourworldindata.org/atom.xml" type="rss"></outline>
+            <outline title="Our World in Data - Data Insights" text="Our World in Data - Data Insights" xmlUrl="http://ourworldindata.org/atom-data-insights.xml" htmlUrl="http://ourworldindata.org/atom-data-insights.xml" type="rss"></outline>
+            <outline title="Sustainability by numbers" text="Sustainability by numbers" xmlUrl="https://www.sustainabilitybynumbers.com/feed" htmlUrl="https://www.sustainabilitybynumbers.com" type="rss"></outline>
+            <outline title="The Data Liberation Project&#39;s newsletter" text="The Data Liberation Project&#39;s newsletter" xmlUrl="https://buttondown.com/data-liberation-project/rss" htmlUrl="https://buttondown.com/data-liberation-project/rss" type="rss"></outline>
+            <outline title="the-visualising-data" text="the-visualising-data" xmlUrl="https://kill-the-newsletter.com/feeds/gdkyfr1yr5bnw36lc25z.xml" htmlUrl="https://kill-the-newsletter.com/feeds/gdkyfr1yr5bnw36lc25z.xml" type="rss"></outline>
+            <outline title="Tim&#39;s Blog" text="Tim&#39;s Blog" xmlUrl="http://timdavies.org.uk/feed" htmlUrl="http://timdavies.org.uk/feed" type="rss"></outline>
+        </outline>
+        <outline text="Development">
+            <outline title="Ooloi Labs “Blog” - Medium" text="Ooloi Labs “Blog” - Medium" xmlUrl="http://medium.com/feed/ooloi-labs-blog" htmlUrl="http://medium.com/feed/ooloi-labs-blog" type="rss"></outline>
+            <outline title="Stories by Development Data Lab on Medium" text="Stories by Development Data Lab on Medium" xmlUrl="http://medium.com/feed/@devdatalab" htmlUrl="http://medium.com/feed/@devdatalab" type="rss"></outline>
+        </outline>
+        <outline text="Food">
+            <outline title="GOYA | Recipes, Stories &amp; Food" text="GOYA | Recipes, Stories &amp; Food" xmlUrl="https://www.goya.in/blog?format=rss" htmlUrl="https://www.goya.in/blog?format=rss" type="rss"></outline>
+        </outline>
+        <outline text="Friends">
+            <outline title="Thejesh GN" text="Thejesh GN" xmlUrl="https://feeds.thejeshgn.com/thejeshgn/" htmlUrl="https://thejeshgn.com" type="rss"></outline>
+            <outline title="Vinayak Mehta" text="Vinayak Mehta" xmlUrl="http://vinayak.io/feed/rss.xml" htmlUrl="http://vinayak.io/feed/rss.xml" type="rss"></outline>
+        </outline>
+        <outline text="Health">
+            <outline title="Asimov Press" text="Asimov Press" xmlUrl="https://kill-the-newsletter.com/feeds/hhjykt772z5epazfai16.xml" htmlUrl="https://kill-the-newsletter.com/feeds/hhjykt772z5epazfai16.xml" type="rss"></outline>
+        </outline>
+        <outline text="Mastodon">
+            <outline title="Hadley Wickham" text="Hadley Wickham" xmlUrl="https://fosstodon.org/@hadleywickham.rss" htmlUrl="https://fosstodon.org/@hadleywickham.rss" type="rss"></outline>
+        </outline>
+        <outline text="Meta">
+            <outline title="Blog on Kailash Nadh / Personal homepage" text="Blog on Kailash Nadh / Personal homepage" xmlUrl="https://nadh.in/blog/index.xml" htmlUrl="https://nadh.in/blog/index.xml" type="rss"></outline>
+            <outline title="Paul Graham: Essays" text="Paul Graham: Essays" xmlUrl="http://aaronsw.com/2002/feeds/pgessays.rss" htmlUrl="http://aaronsw.com/2002/feeds/pgessays.rss" type="rss"></outline>
+            <outline title="The Technium" text="The Technium" xmlUrl="https://feedpress.me/TheTechnium" htmlUrl="https://kk.org/thetechnium" type="rss"></outline>
+        </outline>
+        <outline text="Podcast">
+            <outline title="The Seen and the Unseen" text="The Seen and the Unseen" xmlUrl="https://seenunseen.in/feed/" htmlUrl="https://seenunseen.in/feed/" type="rss"></outline>
+        </outline>
+        <outline text="Policy">
+            <outline title="The Daily Brief by Zerodha" text="The Daily Brief by Zerodha" xmlUrl="https://thedailybrief.zerodha.com/feed" htmlUrl="https://thedailybrief.zerodha.com" type="rss"></outline>
+            <outline title="The Leap Blog" text="The Leap Blog" xmlUrl="http://blog.theleapjournal.org/feeds/posts/default" htmlUrl="http://blog.theleapjournal.org/feeds/posts/default" type="rss"></outline>
+        </outline>
+        <outline text="Product">
+            <outline title="Blog on Alison Hill, PhD" text="Blog on Alison Hill, PhD" xmlUrl="https://www.apreshill.com/blog/index.xml" htmlUrl="https://www.apreshill.com/blog/index.xml" type="rss"></outline>
+        </outline>
+        <outline text="R">
+            <outline title="Before I Sleep" text="Before I Sleep" xmlUrl="https://milesmcbain.com/index.xml" htmlUrl="https://milesmcbain.com/index.xml" type="rss"></outline>
+            <outline title="Garrick Aden-Buie" text="Garrick Aden-Buie" xmlUrl="https://www.garrickadenbuie.com/blog/index.xml" htmlUrl="https://www.garrickadenbuie.com/blog/index.xml" type="rss"></outline>
+            <outline title="Maëlle&#39;s R blog on Maëlle Salmon&#39;s personal website" text="Maëlle&#39;s R blog on Maëlle Salmon&#39;s personal website" xmlUrl="https://masalmon.eu/post/index.xml" htmlUrl="https://masalmon.eu/post/index.xml" type="rss"></outline>
+            <outline title="Notes from a data witch" text="Notes from a data witch" xmlUrl="https://blog.djnavarro.net/index.xml" htmlUrl="https://blog.djnavarro.net/" type="rss"></outline>
+            <outline title="sellorm" text="sellorm" xmlUrl="https://blog.sellorm.com/index.xml" htmlUrl="https://blog.sellorm.com/index.xml" type="rss"></outline>
+        </outline>
+        <outline text="Science">
+            <outline title="Quanta Magazine" text="Quanta Magazine" xmlUrl="https://www.quantamagazine.org/feed/" htmlUrl="https://www.quantamagazine.org" type="rss"></outline>
+        </outline>
+        <outline text="Society">
+            <outline title="Aeon | a world of ideas" text="Aeon | a world of ideas" xmlUrl="https://aeon.co/feed.rss" htmlUrl="https://aeon.co" type="rss"></outline>
+            <outline title="asteriskmag" text="asteriskmag" xmlUrl="https://asteriskmag.com/feed" htmlUrl="https://asteriskmag.com/" type="rss"></outline>
+            <outline title="Connected by data" text="Connected by data" xmlUrl="http://connectedbydata.org/feed" htmlUrl="http://connectedbydata.org/feed" type="rss"></outline>
+            <outline title="New Things Under the Sun" text="New Things Under the Sun" xmlUrl="https://www.newthingsunderthesun.com/rss.xml" htmlUrl="https://www.newthingsunderthesun.com" type="rss"></outline>
+            <outline title="The Engine Room" text="The Engine Room" xmlUrl="https://www.theengineroom.org/feed/" htmlUrl="https://www.theengineroom.org/feed/" type="rss"></outline>
+            <outline title="The Works in Progress Newsletter" text="The Works in Progress Newsletter" xmlUrl="https://www.worksinprogress.news/feed" htmlUrl="https://www.worksinprogress.news" type="rss"></outline>
+        </outline>
+        <outline text="Substack">
+            <outline title="Asimov Press" text="Asimov Press" xmlUrl="https://www.asimov.press/feed" htmlUrl="https://www.asimov.press" type="rss"></outline>
+            <outline title="Escaping Flatland" text="Escaping Flatland" xmlUrl="https://www.henrikkarlsson.xyz/feed" htmlUrl="https://www.henrikkarlsson.xyz" type="rss"></outline>
+        </outline>
+        <outline text="Sustainability">
+            <outline title="LOW←TECH MAGAZINE English" text="LOW←TECH MAGAZINE English" xmlUrl="http://solar.lowtechmagazine.com/posts/index.xml" htmlUrl="http://solar.lowtechmagazine.com/posts/index.xml" type="rss"></outline>
+        </outline>
+        <outline text="Tech">
+            <outline title="EXPLAIN EXTENDED" text="EXPLAIN EXTENDED" xmlUrl="http://feeds.feedburner.com/explainextended" htmlUrl="http://feeds.feedburner.com/explainextended" type="rss"></outline>
+            <outline title="Geoffrey Litt" text="Geoffrey Litt" xmlUrl="https://www.geoffreylitt.com/feed.xml" htmlUrl="http://geoffreylitt.com/" type="rss"></outline>
+            <outline title="It Will Never Work in Theory" text="It Will Never Work in Theory" xmlUrl="http://neverworkintheory.org/atom.xml" htmlUrl="http://neverworkintheory.org/atom.xml" type="rss"></outline>
+            <outline title="Julia Evans" text="Julia Evans" xmlUrl="http://jvns.ca/atom.xml" htmlUrl="http://jvns.ca/atom.xml" type="rss"></outline>
+            <outline title="nilenso blog" text="nilenso blog" xmlUrl="https://blog.nilenso.com/atom.xml" htmlUrl="http://blog.nilenso.com/" type="rss"></outline>
+            <outline title="rud.is" text="rud.is" xmlUrl="https://rud.is/b/feed/" htmlUrl="https://rud.is/b/feed/" type="rss"></outline>
+            <outline title="S Anand" text="S Anand" xmlUrl="https://www.s-anand.net/blog/feed/" htmlUrl="https://www.s-anand.net/blog/feed/" type="rss"></outline>
+            <outline title="Simon Willison&#39;s Weblog" text="Simon Willison&#39;s Weblog" xmlUrl="http://simonwillison.net/atom/everything/" htmlUrl="http://simonwillison.net/atom/everything/" type="rss"></outline>
+            <outline title="Simon Willison’s Newsletter" text="Simon Willison’s Newsletter" xmlUrl="https://simonw.substack.com/feed" htmlUrl="https://simonw.substack.com" type="rss"></outline>
+            <outline title="Simpler Machines" text="Simpler Machines" xmlUrl="http://simplermachines.com/rss" htmlUrl="http://simplermachines.com/rss" type="rss"></outline>
+            <outline title="Square Signals" text="Square Signals" xmlUrl="http://blog.andymatuschak.org/rss" htmlUrl="http://blog.andymatuschak.org/rss" type="rss"></outline>
+            <outline title="Steven Deobald" text="Steven Deobald" xmlUrl="https://www.deobald.ca/index.xml" htmlUrl="https://www.deobald.ca/" type="rss"></outline>
+            <outline title="The Pragmatic Engineer" text="The Pragmatic Engineer" xmlUrl="https://newsletter.pragmaticengineer.com/feed" htmlUrl="https://newsletter.pragmaticengineer.com" type="rss"></outline>
+            <outline title="The Third Bit" text="The Third Bit" xmlUrl="http://third-bit.com/atom.xml" htmlUrl="http://third-bit.com/atom.xml" type="rss"></outline>
+            <outline title="Two-Bit History" text="Two-Bit History" xmlUrl="http://twobithistory.org/feed.xml" htmlUrl="http://twobithistory.org/feed.xml" type="rss"></outline>
+            <outline title="Two-Wrongs" text="Two-Wrongs" xmlUrl="http://two-wrongs.com/feed" htmlUrl="http://two-wrongs.com/feed" type="rss"></outline>
+            <outline title="Yihui&#39;s Blog on Yihui Xie | 谢益辉" text="Yihui&#39;s Blog on Yihui Xie | 谢益辉" xmlUrl="http://yihui.org/en/index.xml" htmlUrl="http://yihui.org/en/index.xml" type="rss"></outline>
+        </outline>
+        <outline text="Web">
+            <outline title="behind-bars" text="behind-bars" xmlUrl="https://kill-the-newsletter.com/feeds/2cvprspsms5kd586myfr.xml" htmlUrl="https://kill-the-newsletter.com/feeds/2cvprspsms5kd586myfr.xml" type="rss"></outline>
+            <outline title="Delhi Watch Company" text="Delhi Watch Company" xmlUrl="https://kill-the-newsletter.com/feeds/pnre15dgk5j368jv4yc7.xml" htmlUrl="https://kill-the-newsletter.com/feeds/pnre15dgk5j368jv4yc7.xml" type="rss"></outline>
+        </outline>
+        <outline text="Work">
+            <outline title="Global Investigative Journalism Network" text="Global Investigative Journalism Network" xmlUrl="http://gijn.org/feed/" htmlUrl="http://gijn.org/feed/" type="rss"></outline>
+            <outline title="Opportunities - data.org" text="Opportunities - data.org" xmlUrl="http://data.org/opportunities/feed" htmlUrl="http://data.org/opportunities/feed" type="rss"></outline>
+            <outline title="REWORK" text="REWORK" xmlUrl="https://feeds.buzzsprout.com/2260539.rss" htmlUrl="https://37signals.com/podcast" type="rss"></outline>
+        </outline>
+        <outline text="run">
+            <outline title="geeks on feet" text="geeks on feet" xmlUrl="https://geeksonfeet.com/index.xml" htmlUrl="https://geeksonfeet.com/" type="rss"></outline>
+        </outline>
+    </body>
+</opml>
