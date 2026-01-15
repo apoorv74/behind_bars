@@ -106,11 +106,12 @@ function generateFrontmatter(type, properties) {
 
   switch (type) {
     case 'note':
-      slug = properties.slug?.[0] || generateSlug(contentText?.substring(0, 30) || 'note');
-      // Generate title from first few words for listing
-      const noteTitle = contentText
-        ? contentText.split(/\s+/).slice(0, 8).join(' ') + (contentText.split(/\s+/).length > 8 ? '...' : '')
-        : 'Note';
+      // Use provided title, or auto-generate from content
+      const noteTitle = properties.name?.[0]
+        || (contentText
+          ? contentText.split(/\s+/).slice(0, 8).join(' ') + (contentText.split(/\s+/).length > 8 ? '...' : '')
+          : 'Note');
+      slug = properties.slug?.[0] || generateSlug(properties.name?.[0] || contentText?.substring(0, 30) || 'note');
       frontmatter = {
         title: noteTitle,
         date,
