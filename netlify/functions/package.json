@@ -1,0 +1,9 @@
+{
+  "name": "behind-bars-micropub",
+  "version": "1.0.0",
+  "description": "Micropub endpoint for Behind Bars blog",
+  "dependencies": {
+    "@octokit/rest": "^20.0.0",
+    "busboy": "^1.6.0"
+  }
+}

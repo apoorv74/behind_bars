@@ -1,0 +1,12 @@
+{{/*
+  IndieAuth and Micropub configuration for mobile microblogging
+  This enables authentication and posting from apps like IndiePass
+*/}}
+
+<!-- IndieAuth: Your identity is your domain -->
+<link rel="me" href="https://github.com/apoorv74">
+<link rel="authorization_endpoint" href="https://indieauth.com/auth">
+<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+
+<!-- Micropub: Where to send posts -->
+<link rel="micropub" href="https://behindbars.netlify.app/.netlify/functions/micropub">
