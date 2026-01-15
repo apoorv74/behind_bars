@@ -4,8 +4,8 @@
  * This serverless function handles Micropub requests and commits
  * posts directly to your GitHub repository.
  *
- * Supports: Notes, Articles, Photos, Bookmarks
- * Target: content/docs/micropub/
+ * Supports: Notes (with optional photos), Bookmarks
+ * Target: content/docs/notes/
  */
 
 const { Octokit } = require('@octokit/rest');
@@ -86,11 +86,10 @@ function getTimestamp() {
 
 /**
  * Determine post type from Micropub properties
+ * Only two types: notes (with optional photos) and bookmarks
  */
 function getPostType(properties) {
   if (properties['bookmark-of']) return 'bookmark';
-  if (properties.photo) return 'photo';
-  if (properties.name && properties.name[0]) return 'article';
   return 'note';
 }
 
@@ -107,7 +106,7 @@ function generateFrontmatter(type, properties) {
 
   switch (type) {
     case 'note':
-      slug = properties.slug?.[0] || generateSlug(contentText.substring(0, 30));
+      slug = properties.slug?.[0] || generateSlug(contentText?.substring(0, 30) || 'note');
       // Generate title from first few words for listing
       const noteTitle = contentText
         ? contentText.split(/\s+/).slice(0, 8).join(' ') + (contentText.split(/\s+/).length > 8 ? '...' : '')
@@ -119,66 +118,24 @@ function generateFrontmatter(type, properties) {
         categories: ['microblog', 'notes'],
         slug
       };
-      break;
-
-    case 'article':
-      const title = properties.name[0];
-      slug = properties.slug?.[0] || generateSlug(title);
-      frontmatter = {
-        title,
-        date,
-        author: CONFIG.site.author,
-        categories: ['microblog', 'articles'],
-        description: properties.summary?.[0] || '',
-        slug
-      };
-      // Handle photos in articles
+      // Handle photos in notes
       if (properties.photo) {
         const photoData = properties.photo;
-        let articlePhotos = [];
+        let notePhotos = [];
         if (Array.isArray(photoData)) {
-          articlePhotos = photoData.map(p => {
+          notePhotos = photoData.map(p => {
             if (typeof p === 'string') return p;
             return p.value || p.url || String(p);
           });
         } else if (typeof photoData === 'string') {
-          articlePhotos = [photoData];
+          notePhotos = [photoData];
         } else if (photoData && (photoData.value || photoData.url)) {
-          articlePhotos = [photoData.value || photoData.url];
+          notePhotos = [photoData.value || photoData.url];
         }
-        if (articlePhotos.length > 0) {
-          frontmatter.images = articlePhotos;
+        if (notePhotos.length > 0) {
+          frontmatter.images = notePhotos;
         }
       }
-      break;
-
-    case 'photo':
-      slug = properties.slug?.[0] || generateSlug(contentText?.substring(0, 20) || 'photo');
-      // Handle different photo formats from various clients
-      let photoUrls = [];
-      const photoData = properties.photo;
-      if (Array.isArray(photoData)) {
-        photoUrls = photoData.map(p => {
-          if (typeof p === 'string') return p;
-          return p.value || p.url || String(p);
-        });
-      } else if (typeof photoData === 'string') {
-        photoUrls = [photoData];
-      } else if (photoData && (photoData.value || photoData.url)) {
-        photoUrls = [photoData.value || photoData.url];
-      }
-      // Generate title for listing
-      const photoTitle = contentText
-        ? contentText.split(/\s+/).slice(0, 6).join(' ') + (contentText.split(/\s+/).length > 6 ? '...' : '')
-        : 'Photo';
-      frontmatter = {
-        title: photoTitle,
-        date,
-        author: CONFIG.site.author,
-        categories: ['microblog', 'photos'],
-        images: photoUrls,
-        slug
-      };
       break;
 
     case 'bookmark':
@@ -355,8 +312,6 @@ exports.handler = async (event, context) => {
           'media-endpoint': `${CONFIG.site.url}/.netlify/functions/micropub-media`,
           'post-types': [
             { type: 'note', name: 'Note' },
-            { type: 'article', name: 'Article' },
-            { type: 'photo', name: 'Photo' },
             { type: 'bookmark', name: 'Bookmark' }
           ]
         })
