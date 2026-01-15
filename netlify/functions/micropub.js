@@ -357,7 +357,10 @@ exports.handler = async (event, context) => {
     await verifyToken(authHeader);
 
     // Parse request
+    console.log('Parsing request...');
+    console.log('Content-Type:', event.headers['content-type']);
     const data = parseRequest(event);
+    console.log('Parsed data:', JSON.stringify(data, null, 2));
 
     // Handle action requests (update, delete)
     if (data.action) {
@@ -370,7 +373,9 @@ exports.handler = async (event, context) => {
 
     // Create post
     const properties = data.properties || {};
+    console.log('Properties:', JSON.stringify(properties, null, 2));
     const { markdown, filename, type, slug } = createMarkdown(properties);
+    console.log('Generated:', { filename, type, slug });
 
     // Commit to GitHub
     const octokit = new Octokit({
@@ -395,7 +400,8 @@ exports.handler = async (event, context) => {
     };
 
   } catch (error) {
-    console.error('Micropub error:', error);
+    console.error('Micropub error:', error.message);
+    console.error('Stack:', error.stack);
 
     if (error.message === 'Invalid token' || error.message.includes('not valid')) {
       return {
