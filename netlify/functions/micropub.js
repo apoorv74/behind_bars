@@ -9,6 +9,7 @@
  */
 
 const { Octokit } = require('@octokit/rest');
+const Busboy = require('busboy');
 
 // Configuration
 const CONFIG = {
@@ -255,13 +256,64 @@ async function handleMediaUpload(octokit, file, filename) {
 }
 
 /**
+ * Parse multipart form data
+ */
+function parseMultipart(event) {
+  return new Promise((resolve, reject) => {
+    const busboy = Busboy({
+      headers: {
+        'content-type': event.headers['content-type'] || event.headers['Content-Type']
+      }
+    });
+
+    const properties = {};
+    const files = [];
+
+    busboy.on('field', (fieldname, value) => {
+      const cleanKey = fieldname.replace('[]', '');
+      if (fieldname.endsWith('[]') || properties[cleanKey]) {
+        if (!properties[cleanKey]) properties[cleanKey] = [];
+        properties[cleanKey].push(value);
+      } else {
+        properties[cleanKey] = [value];
+      }
+    });
+
+    busboy.on('file', (fieldname, file, info) => {
+      const chunks = [];
+      file.on('data', (chunk) => chunks.push(chunk));
+      file.on('end', () => {
+        files.push({
+          fieldname,
+          filename: info.filename,
+          mimeType: info.mimeType,
+          data: Buffer.concat(chunks)
+        });
+      });
+    });
+
+    busboy.on('finish', () => {
+      resolve({ properties, files });
+    });
+
+    busboy.on('error', reject);
+
+    const body = event.isBase64Encoded
+      ? Buffer.from(event.body, 'base64')
+      : event.body;
+
+    busboy.end(body);
+  });
+}
+
+/**
  * Parse form data or JSON from request
  */
-function parseRequest(event) {
+async function parseRequest(event) {
   const contentType = event.headers['content-type'] || '';
 
   if (contentType.includes('application/json')) {
-    return JSON.parse(event.body);
+    return { data: JSON.parse(event.body), files: [] };
   }
 
   if (contentType.includes('application/x-www-form-urlencoded')) {
@@ -269,7 +321,6 @@ function parseRequest(event) {
     const properties = {};
 
     for (const [key, value] of params.entries()) {
-      // Handle array notation like content[] or category[]
       const cleanKey = key.replace('[]', '');
       if (key.endsWith('[]') || properties[cleanKey]) {
         if (!properties[cleanKey]) properties[cleanKey] = [];
@@ -279,10 +330,15 @@ function parseRequest(event) {
       }
     }
 
-    return { type: 'h-entry', properties };
+    return { data: { type: 'h-entry', properties }, files: [] };
   }
 
-  throw new Error('Unsupported content type');
+  if (contentType.includes('multipart/form-data')) {
+    const { properties, files } = await parseMultipart(event);
+    return { data: { type: 'h-entry', properties }, files };
+  }
+
+  throw new Error('Unsupported content type: ' + contentType);
 }
 
 /**
@@ -359,8 +415,9 @@ exports.handler = async (event, context) => {
     // Parse request
     console.log('Parsing request...');
     console.log('Content-Type:', event.headers['content-type']);
-    const data = parseRequest(event);
+    const { data, files } = await parseRequest(event);
     console.log('Parsed data:', JSON.stringify(data, null, 2));
+    console.log('Files count:', files.length);
 
     // Handle action requests (update, delete)
     if (data.action) {
@@ -373,14 +430,35 @@ exports.handler = async (event, context) => {
 
     // Create post
     const properties = data.properties || {};
+
+    // Initialize GitHub client
+    const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+    // Upload any files and add URLs to properties
+    if (files.length > 0) {
+      const photoUrls = [];
+
+      for (const file of files) {
+        if (file.mimeType.startsWith('image/')) {
+          const timestamp = Date.now();
+          const random = Math.random().toString(36).substring(2, 8);
+          const ext = file.filename?.split('.').pop() || 'jpg';
+          const mediaFilename = `${timestamp}-${random}.${ext}`;
+          const path = `${CONFIG.github.mediaPath}/${mediaFilename}`;
+
+          await commitToGitHub(octokit, path, file.data, `Micropub: Upload ${mediaFilename}`);
+          photoUrls.push(`${CONFIG.site.url}/images/micropub/${mediaFilename}`);
+        }
+      }
+
+      if (photoUrls.length > 0) {
+        properties.photo = photoUrls;
+      }
+    }
+
     console.log('Properties:', JSON.stringify(properties, null, 2));
     const { markdown, filename, type, slug } = createMarkdown(properties);
     console.log('Generated:', { filename, type, slug });
-
-    // Commit to GitHub
-    const octokit = new Octokit({
-      auth: process.env.GITHUB_TOKEN
-    });
 
     const path = `${CONFIG.github.contentPath}/${filename}`;
     const commitMessage = `Micropub: New ${type}${properties.name?.[0] ? ` - ${properties.name[0]}` : ''}`;
