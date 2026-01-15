@@ -17,7 +17,7 @@ const CONFIG = {
     owner: 'apoorv74',
     repo: 'behind_bars',
     branch: 'main',
-    contentPath: 'content/docs/micropub',
+    contentPath: 'content/docs/notes',
     mediaPath: 'static/images/micropub'
   },
   // Site settings
@@ -391,7 +391,7 @@ exports.handler = async (event, context) => {
     await commitToGitHub(octokit, path, markdown, commitMessage);
 
     // Return success with location
-    const postUrl = `${CONFIG.site.url}/docs/micropub/${slug}/`;
+    const postUrl = `${CONFIG.site.url}/docs/notes/${slug}/`;
 
     return {
       statusCode: 201,
