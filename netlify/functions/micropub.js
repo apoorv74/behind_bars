@@ -108,11 +108,15 @@ function generateFrontmatter(type, properties) {
   switch (type) {
     case 'note':
       slug = properties.slug?.[0] || generateSlug(contentText.substring(0, 30));
+      // Generate title from first few words for listing
+      const noteTitle = contentText
+        ? contentText.split(/\s+/).slice(0, 8).join(' ') + (contentText.split(/\s+/).length > 8 ? '...' : '')
+        : 'Note';
       frontmatter = {
+        title: noteTitle,
         date,
         author: CONFIG.site.author,
         categories: ['microblog', 'notes'],
-        type: 'note',
         slug
       };
       break;
@@ -128,18 +132,50 @@ function generateFrontmatter(type, properties) {
         description: properties.summary?.[0] || '',
         slug
       };
+      // Handle photos in articles
+      if (properties.photo) {
+        const photoData = properties.photo;
+        let articlePhotos = [];
+        if (Array.isArray(photoData)) {
+          articlePhotos = photoData.map(p => {
+            if (typeof p === 'string') return p;
+            return p.value || p.url || String(p);
+          });
+        } else if (typeof photoData === 'string') {
+          articlePhotos = [photoData];
+        } else if (photoData && (photoData.value || photoData.url)) {
+          articlePhotos = [photoData.value || photoData.url];
+        }
+        if (articlePhotos.length > 0) {
+          frontmatter.images = articlePhotos;
+        }
+      }
       break;
 
     case 'photo':
       slug = properties.slug?.[0] || generateSlug(contentText?.substring(0, 20) || 'photo');
-      const photoUrls = Array.isArray(properties.photo)
-        ? properties.photo.map(p => typeof p === 'string' ? p : p.value)
-        : [properties.photo];
+      // Handle different photo formats from various clients
+      let photoUrls = [];
+      const photoData = properties.photo;
+      if (Array.isArray(photoData)) {
+        photoUrls = photoData.map(p => {
+          if (typeof p === 'string') return p;
+          return p.value || p.url || String(p);
+        });
+      } else if (typeof photoData === 'string') {
+        photoUrls = [photoData];
+      } else if (photoData && (photoData.value || photoData.url)) {
+        photoUrls = [photoData.value || photoData.url];
+      }
+      // Generate title for listing
+      const photoTitle = contentText
+        ? contentText.split(/\s+/).slice(0, 6).join(' ') + (contentText.split(/\s+/).length > 6 ? '...' : '')
+        : 'Photo';
       frontmatter = {
+        title: photoTitle,
         date,
         author: CONFIG.site.author,
         categories: ['microblog', 'photos'],
-        type: 'photo',
         images: photoUrls,
         slug
       };
