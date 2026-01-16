@@ -9,9 +9,13 @@
       </a>
     </h3>
     {{/* Show categories except "microblog" */}}
-    {{ with .Params.categories }}
+    {{ if .Params.categories }}
     <div class='item-tags'>
-      {{ range . }}
+      {{ $cats := .Params.categories }}
+      {{ if not (reflect.IsSlice $cats) }}
+        {{ $cats = slice $cats }}
+      {{ end }}
+      {{ range $cats }}
         {{ if ne . "microblog" }}
         <a href='{{ "categories/" | relURL }}{{ . | urlize }}/' class='tag'>{{ . }}</a>
         {{ end }}
