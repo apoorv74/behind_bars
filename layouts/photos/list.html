@@ -1,0 +1,36 @@
+{{ partial "header" . }}
+
+{{ partial "header/header" . }}
+
+{{ if .Content }}
+<div class='entry'>
+  {{ partial "entry/content" . }}
+</div>
+{{ end }}
+
+<div class='container'>
+  <div class='photo-gallery'>
+    {{ range (.Paginator.Pages.GroupByDate "Jan 2006") }}
+      <h2 class='gallery-date'>{{ .Key }}</h2>
+      <div class='gallery-grid'>
+        {{ range .Pages }}
+          {{ with .Resources.ByType "image" }}
+            {{ range first 1 . }}
+              {{ $thumbnail := .Fill "400x400" }}
+              <div class='gallery-item'>
+                <a href='{{ $.Permalink }}'>
+                  <img src='{{ $thumbnail.RelPermalink }}' alt='{{ $.Title }}' loading='lazy'>
+                  <div class='gallery-caption'>{{ $.Title }}</div>
+                </a>
+              </div>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+
+  {{ partial "nav/pagination" . }}
+</div>
+
+{{ partial "footer" . }}
