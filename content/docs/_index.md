@@ -1,6 +1,6 @@
 ---
 title: For tomorrow, we ride
-linkTitle: Docs
+linkTitle: Posts
 menu: main
 weight: -250
 slug: docs

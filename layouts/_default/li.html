@@ -1,0 +1,22 @@
+<li class='item'>
+  <div class='meta'>
+    {{ partial "list/date" . }}
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='{{ .Permalink | relURL }}'>
+        {{- .Title -}}
+      </a>
+    </h3>
+    {{/* Show categories except "microblog" */}}
+    {{ with .Params.categories }}
+    <div class='item-tags'>
+      {{ range . }}
+        {{ if ne . "microblog" }}
+        <a href='{{ "categories/" | relURL }}{{ . | urlize }}/' class='tag'>{{ . }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+</li>

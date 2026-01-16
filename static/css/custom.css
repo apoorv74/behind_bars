@@ -21,3 +21,23 @@ ins {
   color: #333;
   border-bottom-style: solid;
 }
+
+/* List item tags */
+.item-tags {
+  margin-top: 0.3em;
+}
+
+.item-tags .tag {
+  font-size: 0.75em;
+  color: #888;
+  text-decoration: none;
+  margin-right: 0.5em;
+}
+
+.item-tags .tag:hover {
+  color: #333;
+}
+
+.item-tags .tag::before {
+  content: "#";
+}
