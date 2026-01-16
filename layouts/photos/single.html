@@ -1,59 +1,46 @@
 {{ partial "header" . }}
 
-<article lang='{{ .Params.lang | default .Lang }}' class='entry photo-entry'>
-  <header class='entry-header'>
-    <h1 class='entry-title'>{{ .Title }}</h1>
-    <div class='entry-meta'>
-      <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
-        {{ .Date.Format "January 2, 2006" }}
-      </time>
-    </div>
-  </header>
+<article lang='{{ .Params.lang | default .Lang }}' class='entry'>
+  {{ partial "entry/header" . }}
 
-  {{ with .Resources.ByType "image" }}
-    {{ $imageCount := len . }}
-    {{ if eq $imageCount 1 }}
-      {{/* Single photo: full width display */}}
-      {{ range . }}
-        {{ $image := .Fit "1200x1200" }}
-        <div class='photo-container'>
-          <img src='{{ $image.RelPermalink }}' alt='{{ $.Title }}' class='photo-main'>
-          {{ with $.Params.caption }}
-            <p class='photo-caption'>{{ . }}</p>
-          {{ end }}
-        </div>
-      {{ end }}
-    {{ else }}
-      {{/* Multiple photos: adaptive grid layout */}}
-      <div class='photo-grid' data-count='{{ $imageCount }}'>
+  <div class='container'>
+    {{ with .Resources.ByType "image" }}
+      {{ $imageCount := len . }}
+      {{ if eq $imageCount 1 }}
+        {{/* Single photo: full width display */}}
         {{ range . }}
           {{ $image := .Fit "1200x1200" }}
-          <div class='photo-grid-item'>
-            <img src='{{ $image.RelPermalink }}' alt='{{ $.Title }}' class='photo-grid-img'>
+          <div class='photo-container'>
+            <img src='{{ $image.RelPermalink }}' alt='{{ $.Title }}' class='photo-main'>
+            {{ with $.Params.caption }}
+              <p class='photo-caption'>{{ . }}</p>
+            {{ end }}
           </div>
         {{ end }}
-      </div>
-      {{ with $.Params.caption }}
-        <p class='photo-caption'>{{ . }}</p>
+      {{ else }}
+        {{/* Multiple photos: adaptive grid layout */}}
+        <div class='photo-grid' data-count='{{ $imageCount }}'>
+          {{ range . }}
+            {{ $image := .Fit "1200x1200" }}
+            <div class='photo-grid-item'>
+              <img src='{{ $image.RelPermalink }}' alt='{{ $.Title }}' class='photo-grid-img'>
+            </div>
+          {{ end }}
+        </div>
+        {{ with $.Params.caption }}
+          <p class='photo-caption'>{{ . }}</p>
+        {{ end }}
       {{ end }}
     {{ end }}
-  {{ end }}
+  </div>
 
   {{ if .Content }}
-    <div class='entry-content photo-story'>
+    <div class='container entry-content'>
       {{ .Content }}
     </div>
   {{ end }}
 
-  <footer class='entry-footer'>
-    {{ with .Params.tags }}
-      <div class='entry-tags'>
-        {{ range . }}
-          <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
-        {{ end }}
-      </div>
-    {{ end }}
-  </footer>
+  {{ partial "entry/footer" . }}
 </article>
 
 {{ partial "nav/entry_nav" . }}
