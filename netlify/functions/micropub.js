@@ -78,6 +78,28 @@ function getPostType(properties) {
 }
 
 /**
+ * Build categories array from base type + user tags
+ */
+function buildCategories(baseType, properties) {
+  const categories = ['microblog', baseType];
+
+  // Add user-provided categories/tags
+  if (properties.category) {
+    const userTags = Array.isArray(properties.category)
+      ? properties.category
+      : [properties.category];
+
+    for (const tag of userTags) {
+      if (tag && !categories.includes(tag)) {
+        categories.push(tag);
+      }
+    }
+  }
+
+  return categories;
+}
+
+/**
  * Generate frontmatter based on post type
  */
 function generateFrontmatter(type, properties) {
@@ -99,7 +121,7 @@ function generateFrontmatter(type, properties) {
       title,
       date,
       author: CONFIG.site.author,
-      categories: ['microblog', 'notes'],
+      categories: buildCategories('notes', properties),
       slug
     };
 
@@ -119,7 +141,7 @@ function generateFrontmatter(type, properties) {
       title: properties.name?.[0] || bookmarkUrl,
       date,
       author: CONFIG.site.author,
-      categories: ['microblog', 'bookmarks'],
+      categories: buildCategories('bookmarks', properties),
       bookmark_of: bookmarkUrl,
       slug
     };
