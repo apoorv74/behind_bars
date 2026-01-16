@@ -14,13 +14,14 @@
       <h2 class='gallery-date'>{{ .Key }}</h2>
       <div class='gallery-grid'>
         {{ range .Pages }}
+          {{ $page := . }}
           {{ with .Resources.ByType "image" }}
             {{ range first 1 . }}
               {{ $thumbnail := .Fill "400x400" }}
               <div class='gallery-item'>
-                <a href='{{ $.Permalink }}'>
-                  <img src='{{ $thumbnail.RelPermalink }}' alt='{{ $.Title }}' loading='lazy'>
-                  <div class='gallery-caption'>{{ $.Title }}</div>
+                <a href='{{ $page.Permalink }}'>
+                  <img src='{{ $thumbnail.RelPermalink }}' alt='{{ $page.Title }}' loading='lazy'>
+                  <div class='gallery-caption'>{{ $page.Title }}</div>
                 </a>
               </div>
             {{ end }}

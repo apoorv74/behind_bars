@@ -65,6 +65,12 @@ enable = false
 platforms = ["github","email"]
 
 [[menu.main]]
+name = "Photos"
+weight = -20
+identifier = "photos"
+url = "/photos/"
+
+[[menu.main]]
 name = "Medium"
 weight = -10
 identifier = "work-blog"
