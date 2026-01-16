@@ -4,7 +4,6 @@
   "private": true,
   "description": "Behind Bars blog with Micropub support",
   "dependencies": {
-    "@octokit/rest": "^20.0.0",
-    "busboy": "^1.6.0"
+    "@octokit/rest": "^20.0.0"
   }
 }

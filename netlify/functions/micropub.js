@@ -1,27 +1,19 @@
 /**
  * Micropub Endpoint for Hugo Static Site
  *
- * This serverless function handles Micropub requests and commits
- * posts directly to your GitHub repository.
- *
- * Supports: Notes (with optional photos), Bookmarks
- * Target: content/docs/notes/
+ * Handles notes and bookmarks, commits directly to GitHub.
+ * Notes can include photo URLs. No file uploads.
  */
 
 const { Octokit } = require('@octokit/rest');
-const Busboy = require('busboy');
 
-// Configuration
 const CONFIG = {
-  // GitHub settings
   github: {
     owner: 'apoorv74',
     repo: 'behind_bars',
     branch: 'main',
-    contentPath: 'content/docs/notes',
-    mediaPath: 'static/images/micropub'
+    contentPath: 'content/docs/notes'
   },
-  // Site settings
   site: {
     url: 'https://behindbars.netlify.app',
     author: 'Apoorv Anand'
@@ -46,7 +38,6 @@ async function verifyToken(token) {
 
   const data = await response.json();
 
-  // Verify the token is for our site
   if (!data.me || !data.me.includes('behindbars.netlify.app')) {
     throw new Error('Token not valid for this site');
   }
@@ -72,22 +63,14 @@ function generateSlug(text, maxLength = 50) {
 }
 
 /**
- * Get current date in ISO format
+ * Get current date string (YYYY-MM-DD)
  */
 function getDateString() {
   return new Date().toISOString().split('T')[0];
 }
 
 /**
- * Get full ISO timestamp
- */
-function getTimestamp() {
-  return new Date().toISOString();
-}
-
-/**
- * Determine post type from Micropub properties
- * Only two types: notes (with optional photos) and bookmarks
+ * Determine post type from properties
  */
 function getPostType(properties) {
   if (properties['bookmark-of']) return 'bookmark';
@@ -98,67 +81,55 @@ function getPostType(properties) {
  * Generate frontmatter based on post type
  */
 function generateFrontmatter(type, properties) {
-  const date = getTimestamp();
-  const content = properties.content ? properties.content[0] : '';
-  const contentText = typeof content === 'object' ? content.html || content.value : content;
+  const date = new Date().toISOString();
+  const content = properties.content?.[0] || '';
+  const contentText = typeof content === 'object' ? (content.html || content.value) : content;
 
   let frontmatter = {};
   let slug = '';
 
-  switch (type) {
-    case 'note':
-      // Use provided title, or auto-generate from content
-      const noteTitle = properties.name?.[0]
-        || (contentText
-          ? contentText.split(/\s+/).slice(0, 8).join(' ') + (contentText.split(/\s+/).length > 8 ? '...' : '')
-          : 'Note');
-      slug = properties.slug?.[0] || generateSlug(properties.name?.[0] || contentText?.substring(0, 30) || 'note');
-      frontmatter = {
-        title: noteTitle,
-        date,
-        author: CONFIG.site.author,
-        categories: ['microblog', 'notes'],
-        slug
-      };
-      // Handle photos in notes
-      if (properties.photo) {
-        const photoData = properties.photo;
-        let notePhotos = [];
-        if (Array.isArray(photoData)) {
-          notePhotos = photoData.map(p => {
-            if (typeof p === 'string') return p;
-            return p.value || p.url || String(p);
-          });
-        } else if (typeof photoData === 'string') {
-          notePhotos = [photoData];
-        } else if (photoData && (photoData.value || photoData.url)) {
-          notePhotos = [photoData.value || photoData.url];
-        }
-        if (notePhotos.length > 0) {
-          frontmatter.images = notePhotos;
-        }
-      }
-      break;
+  if (type === 'note') {
+    const title = properties.name?.[0]
+      || (contentText
+        ? contentText.split(/\s+/).slice(0, 8).join(' ') + (contentText.split(/\s+/).length > 8 ? '...' : '')
+        : 'Note');
+    slug = properties.slug?.[0] || generateSlug(properties.name?.[0] || contentText?.substring(0, 30) || 'note');
 
-    case 'bookmark':
-      const bookmarkUrl = properties['bookmark-of'][0];
-      slug = properties.slug?.[0] || generateSlug(properties.name?.[0] || 'bookmark');
-      frontmatter = {
-        title: properties.name?.[0] || bookmarkUrl,
-        date,
-        author: CONFIG.site.author,
-        categories: ['microblog', 'bookmarks'],
-        bookmark_of: bookmarkUrl,
-        slug
-      };
-      break;
+    frontmatter = {
+      title,
+      date,
+      author: CONFIG.site.author,
+      categories: ['microblog', 'notes'],
+      slug
+    };
+
+    // Handle photo URLs
+    if (properties.photo) {
+      const photos = Array.isArray(properties.photo) ? properties.photo : [properties.photo];
+      const photoUrls = photos.map(p => typeof p === 'string' ? p : (p.value || p.url || String(p)));
+      if (photoUrls.length > 0) {
+        frontmatter.images = photoUrls;
+      }
+    }
+  } else if (type === 'bookmark') {
+    const bookmarkUrl = properties['bookmark-of'][0];
+    slug = properties.slug?.[0] || generateSlug(properties.name?.[0] || 'bookmark');
+
+    frontmatter = {
+      title: properties.name?.[0] || bookmarkUrl,
+      date,
+      author: CONFIG.site.author,
+      categories: ['microblog', 'bookmarks'],
+      bookmark_of: bookmarkUrl,
+      slug
+    };
   }
 
   return { frontmatter, slug, type };
 }
 
 /**
- * Convert frontmatter object to YAML string
+ * Convert frontmatter object to YAML
  */
 function toYaml(obj) {
   let yaml = '---\n';
@@ -169,7 +140,6 @@ function toYaml(obj) {
     if (Array.isArray(value)) {
       yaml += `${key}: [${value.map(v => `"${v}"`).join(', ')}]\n`;
     } else if (typeof value === 'string') {
-      // Quote strings that might contain special characters
       if (value.includes(':') || value.includes('#') || value.includes('"')) {
         yaml += `${key}: "${value.replace(/"/g, '\\"')}"\n`;
       } else {
@@ -185,13 +155,12 @@ function toYaml(obj) {
 }
 
 /**
- * Create the full markdown content
+ * Create markdown content from properties
  */
 function createMarkdown(properties) {
   const type = getPostType(properties);
   const { frontmatter, slug } = generateFrontmatter(type, properties);
 
-  // Get content
   let content = '';
   if (properties.content) {
     const rawContent = properties.content[0];
@@ -201,10 +170,7 @@ function createMarkdown(properties) {
   }
 
   const markdown = toYaml(frontmatter) + '\n' + content + '\n';
-
-  // Generate filename
-  const dateStr = getDateString();
-  const filename = `${dateStr}-${type}-${slug}.md`;
+  const filename = `${getDateString()}-${type}-${slug}.md`;
 
   return { markdown, filename, type, slug };
 }
@@ -213,7 +179,6 @@ function createMarkdown(properties) {
  * Commit file to GitHub
  */
 async function commitToGitHub(octokit, path, content, message) {
-  // Check if file already exists
   let sha;
   try {
     const { data } = await octokit.repos.getContent({
@@ -224,10 +189,9 @@ async function commitToGitHub(octokit, path, content, message) {
     });
     sha = data.sha;
   } catch (e) {
-    // File doesn't exist, that's fine
+    // File doesn't exist
   }
 
-  // Create or update file
   await octokit.repos.createOrUpdateFileContents({
     owner: CONFIG.github.owner,
     repo: CONFIG.github.repo,
@@ -240,80 +204,13 @@ async function commitToGitHub(octokit, path, content, message) {
 }
 
 /**
- * Handle media upload
+ * Parse request body (JSON or form-urlencoded)
  */
-async function handleMediaUpload(octokit, file, filename) {
-  const path = `${CONFIG.github.mediaPath}/${filename}`;
-
-  await commitToGitHub(
-    octokit,
-    path,
-    file,
-    `Micropub: Upload media - ${filename}`
-  );
-
-  return `${CONFIG.site.url}/images/micropub/${filename}`;
-}
-
-/**
- * Parse multipart form data
- */
-function parseMultipart(event) {
-  return new Promise((resolve, reject) => {
-    const busboy = Busboy({
-      headers: {
-        'content-type': event.headers['content-type'] || event.headers['Content-Type']
-      }
-    });
-
-    const properties = {};
-    const files = [];
-
-    busboy.on('field', (fieldname, value) => {
-      const cleanKey = fieldname.replace('[]', '');
-      if (fieldname.endsWith('[]') || properties[cleanKey]) {
-        if (!properties[cleanKey]) properties[cleanKey] = [];
-        properties[cleanKey].push(value);
-      } else {
-        properties[cleanKey] = [value];
-      }
-    });
-
-    busboy.on('file', (fieldname, file, info) => {
-      const chunks = [];
-      file.on('data', (chunk) => chunks.push(chunk));
-      file.on('end', () => {
-        files.push({
-          fieldname,
-          filename: info.filename,
-          mimeType: info.mimeType,
-          data: Buffer.concat(chunks)
-        });
-      });
-    });
-
-    busboy.on('finish', () => {
-      resolve({ properties, files });
-    });
-
-    busboy.on('error', reject);
-
-    const body = event.isBase64Encoded
-      ? Buffer.from(event.body, 'base64')
-      : event.body;
-
-    busboy.end(body);
-  });
-}
-
-/**
- * Parse form data or JSON from request
- */
-async function parseRequest(event) {
+function parseRequest(event) {
   const contentType = event.headers['content-type'] || '';
 
   if (contentType.includes('application/json')) {
-    return { data: JSON.parse(event.body), files: [] };
+    return JSON.parse(event.body);
   }
 
   if (contentType.includes('application/x-www-form-urlencoded')) {
@@ -330,43 +227,36 @@ async function parseRequest(event) {
       }
     }
 
-    return { data: { type: 'h-entry', properties }, files: [] };
+    return { type: 'h-entry', properties };
   }
 
-  if (contentType.includes('multipart/form-data')) {
-    const { properties, files } = await parseMultipart(event);
-    return { data: { type: 'h-entry', properties }, files };
-  }
-
-  throw new Error('Unsupported content type: ' + contentType);
+  throw new Error('Unsupported content type');
 }
 
 /**
  * Main handler
  */
-exports.handler = async (event, context) => {
-  // CORS headers
+exports.handler = async (event) => {
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Authorization, Content-Type',
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
   };
 
-  // Handle preflight
+  // CORS preflight
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 200, headers, body: '' };
   }
 
-  // Handle GET request (configuration query)
+  // Config queries
   if (event.httpMethod === 'GET') {
-    const params = new URLSearchParams(event.queryStringParameters || {});
+    const q = event.queryStringParameters?.q;
 
-    if (params.get('q') === 'config') {
+    if (q === 'config') {
       return {
         statusCode: 200,
         headers: { ...headers, 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          'media-endpoint': `${CONFIG.site.url}/.netlify/functions/micropub-media`,
           'post-types': [
             { type: 'note', name: 'Note' },
             { type: 'bookmark', name: 'Bookmark' }
@@ -375,7 +265,7 @@ exports.handler = async (event, context) => {
       };
     }
 
-    if (params.get('q') === 'syndicate-to') {
+    if (q === 'syndicate-to') {
       return {
         statusCode: 200,
         headers: { ...headers, 'Content-Type': 'application/json' },
@@ -390,7 +280,7 @@ exports.handler = async (event, context) => {
     };
   }
 
-  // Only POST allowed for creating content
+  // Only POST for creating
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -400,7 +290,7 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    // Verify authorization
+    // Auth
     const authHeader = event.headers.authorization || event.headers.Authorization;
     if (!authHeader) {
       return {
@@ -412,14 +302,9 @@ exports.handler = async (event, context) => {
 
     await verifyToken(authHeader);
 
-    // Parse request
-    console.log('Parsing request...');
-    console.log('Content-Type:', event.headers['content-type']);
-    const { data, files } = await parseRequest(event);
-    console.log('Parsed data:', JSON.stringify(data, null, 2));
-    console.log('Files count:', files.length);
+    // Parse and create post
+    const data = parseRequest(event);
 
-    // Handle action requests (update, delete)
     if (data.action) {
       return {
         statusCode: 501,
@@ -428,60 +313,28 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // Create post
     const properties = data.properties || {};
-
-    // Initialize GitHub client
-    const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
-    // Upload any files and add URLs to properties
-    if (files.length > 0) {
-      const photoUrls = [];
-
-      for (const file of files) {
-        if (file.mimeType.startsWith('image/')) {
-          const timestamp = Date.now();
-          const random = Math.random().toString(36).substring(2, 8);
-          const ext = file.filename?.split('.').pop() || 'jpg';
-          const mediaFilename = `${timestamp}-${random}.${ext}`;
-          const path = `${CONFIG.github.mediaPath}/${mediaFilename}`;
-
-          await commitToGitHub(octokit, path, file.data, `Micropub: Upload ${mediaFilename}`);
-          photoUrls.push(`${CONFIG.site.url}/images/micropub/${mediaFilename}`);
-        }
-      }
-
-      if (photoUrls.length > 0) {
-        properties.photo = photoUrls;
-      }
-    }
-
-    console.log('Properties:', JSON.stringify(properties, null, 2));
     const { markdown, filename, type, slug } = createMarkdown(properties);
-    console.log('Generated:', { filename, type, slug });
 
+    // Commit to GitHub
+    const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
     const path = `${CONFIG.github.contentPath}/${filename}`;
     const commitMessage = `Micropub: New ${type}${properties.name?.[0] ? ` - ${properties.name[0]}` : ''}`;
 
     await commitToGitHub(octokit, path, markdown, commitMessage);
 
-    // Return success with location
     const postUrl = `${CONFIG.site.url}/docs/notes/${slug}/`;
 
     return {
       statusCode: 201,
-      headers: {
-        ...headers,
-        'Location': postUrl
-      },
+      headers: { ...headers, 'Location': postUrl },
       body: JSON.stringify({ url: postUrl })
     };
 
   } catch (error) {
     console.error('Micropub error:', error.message);
-    console.error('Stack:', error.stack);
 
-    if (error.message === 'Invalid token' || error.message.includes('not valid')) {
+    if (error.message.includes('token') || error.message.includes('Token')) {
       return {
         statusCode: 403,
         headers,
@@ -492,7 +345,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: 'Internal server error', message: error.message })
+      body: JSON.stringify({ error: 'Server error', message: error.message })
     };
   }
 };
