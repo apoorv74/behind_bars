@@ -1,8 +1,8 @@
 ---
 title: "A Pattern Language"
-date: "2026-01-16T01:49:02.197Z"
+date: "2026-01-16T01:54:15.754Z"
 author: "Apoorv Anand"
-categories: ["microblog", "bookmarks"]
+categories: ["microblog", "bookmarks", "quartz", "architecture"]
 bookmark_of: "https://patternlanguage.cc/"
 slug: "a-pattern-language"
 ---
