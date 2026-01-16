@@ -1,0 +1,10 @@
+<div class='container entry-content'>
+  {{/* Display bookmark source link if this is a bookmark */}}
+  {{ with .Params.bookmark_of }}
+  <p class="bookmark-source">
+    <a href="{{ . }}" target="_blank" rel="noopener">{{ . | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</a>
+  </p>
+  {{ end }}
+
+  {{ .Content }}
+</div>
