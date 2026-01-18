@@ -13,7 +13,7 @@ This [article](https://www.livemint.com/Leisure/b6HaMFgXb9Mu4gh7ZODJLM/Kukkaraha
 
 >  “Sometimes, I went back to the Kukkarahalli tank in the late afternoon, when the evening sun touched the rippling water-surface to produce uncanny lighting effects, and the western sky presented a gorgeous display of colours and cloud formations at sunset. Even today, I would assert, after having visited many parts of the world, that nowhere can you witness such masterpiece sunsets as in Mysore. I would sit on a bench on the tank and watch the sun’s performance, the gradual fading of the colours in the sky, and the emergence of the first single star at dusk.”
 
-Having seen a few myself, I can vouge about the sunsets here. I doubt that I'll see something more beautiful.
+Having seen a few myself, I can vouch about the sunsets here. I doubt that I'll see something more beautiful.
 
 > How many times have I seen this sight, sitting here?
 > How many times have I paid obeisance to the beauty here?
