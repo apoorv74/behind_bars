@@ -1,4 +1,4 @@
-baseURL = "quietrevolutions.in"
+baseURL = "https://quietrevolutions.in"
 title = "Quiet Revolutions"
 
 # for smart copyright line, leave this blank and check [params.copyright]
