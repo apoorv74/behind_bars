@@ -1,7 +1,7 @@
 ---
 title: "Riding the Kaveri Trail in Mysore"
 date: 2026-01-11
-tags: ["cyling", "route"]
+tags: ["cyling", "route","photos"]
 ---
 
 
