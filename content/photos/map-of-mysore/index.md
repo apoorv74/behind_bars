@@ -17,7 +17,7 @@ Having seen a few myself, I can vouge about the sunsets here. I doubt that I'll 
 
 > How many times have I seen this sight, sitting here?
 > How many times have I paid obeisance to the beauty here?
-> Countless times. And I’m not done yet. I’ll be back.
-> 
-> - Kukkarahalli Kereya Mele - [Kuvempu](https://en.wikipedia.org/wiki/Kuvempu)
+> Countless times. And I’m not done yet. I’ll be back. 
+
+*Kukkarahalli Kereya Mele (Translated from Kannada) - [Kuvempu](https://en.wikipedia.org/wiki/Kuvempu)*
 
