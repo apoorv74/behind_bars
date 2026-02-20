@@ -21,7 +21,7 @@ So instead of attaching the PDF directly to an LLM, I first passed it to Docling
 
 The pdf processing pipeline looks like this:
 
-![pdf processing flowchart](/static/images/pdf-processing-flowchart.png)
+![pdf processing flowchart](/images/pdf-processing-flowchart.png)
 
 I managed to complete this task within the prescribed session token limits for Claude Code Pro plan. A few other things that helped:
 
