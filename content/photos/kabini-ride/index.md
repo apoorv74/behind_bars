@@ -1,0 +1,16 @@
+Doing a sub-100K ride has crossed my head a few times lately, especially after moving to Mysuru. No dearth of options here. I've been on the route to Coorg via Kushalnagar a couple of times. Never on a bike, so it was the first option on my list. Saw a few well marked routes on [Ride with GPS](https://ridewithgps.com/). The [Wayanad](https://ridewithgps.com/routes/49217739) one felt enticing. I wanted to do an overnight trip so started searching for stays. Then Kabini emerged as the front runner when my partner found out a [well rated farm stay ](https://maps.app.goo.gl/ycjyv7b4nVm5VSr18)near kabini backwaters. Spoke to the owner and finalised the rest of the plan. 
+
+I had not taken out the [Scolarian](https://www.scolarian.com/mudfestclassic) for a longer ride in a while. Got it checked a day before.  A bar of CO2 was the only thing needed to get it ready for the ride. I left home around 6:30 AM. After a couple of pitstops, I reached around 9:15 AM. The weather was perfect till 8:30. I was thinking of going all the way till Kabini backwaters, 10 kms from the stay. But then it started to get sunny and by 9:15, I was feeling content to end the first stage of my ride. 
+
+I was the only guest at the property. The owner was kind and generous to upgrade my stay so I could rest well and enjoy my time here. The staff was welcoming, patient and respected the space. The food was simple and good. Phone network was good enough for calls and basic browsing. My plan was to reach kabini backwaters before 6:10 PM soni can catch the sunset. I left around 5:30 and reached at the perfect time. Was feeling slightly anxious thinking about riding back from here post the sunset. But I reached back just before 7 PM when it wasn't fully dark. As soon as my hunger levels rose after a good cold shower, the dinner was ready. Went to bed reading [Hangwoman by KR Meera](https://www.penguin.co.in/book/hangwoman/). 
+
+I wanted to reach home before it got sunny. So decided to leave the property as early I can. I left around 6:30. It was pitch dark till 6:15. The caretakers packed me some food. They insisted even when I told them to not worry as it would be too early for them. This time the inclines felt much steeper and longer. I was dropping down to lower gears more as compared to the first leg. Stopped for a water break and to click a few pictures. Then made a final pit stop near the house, at [Kukkarahalli](https://maps.app.goo.gl/UVMUZAwuwmBzRkUN9) , to recharge myself with some coconut water. It never tasted more sweeter. Reached back home by 9:30 AM. 
+
+Notes for myself. 
+Vitiligo makes it hard to do anything when it's sunny. There is always room for more sunscreen. This trip gave me enough confidence to do much longer rides. Riding beyond 9 AM is tough. So the key is to start early. I wanted to take the same route back, sometimes doing a circular round trip might be better especially for longer distances. A spare tube, puncture kit (which I didn't carry) always helps reduce anxiety. 
+
+I haven't added any racks on the Scolarian yet. I carried a small backpack on my shoulders and a small frame bag which I used for first aid, gels, multi tool, etc. 
+
+A few things I carried with me. 
+
+A few pictures from the trip. 
