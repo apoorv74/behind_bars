@@ -3,6 +3,7 @@
 <article lang='{{ .Params.lang | default .Lang }}' class='entry'>
   {{ partial "entry/header" . }}
 
+  {{ if not .Params.inline_photos }}
   <div class='container'>
     {{ with .Resources.ByType "image" }}
       {{ $imageCount := len . }}
@@ -33,6 +34,7 @@
       {{ end }}
     {{ end }}
   </div>
+  {{ end }}
 
   {{ if .Content }}
     <div class='container entry-content'>
