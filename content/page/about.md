@@ -40,6 +40,6 @@ Having said that, i am aware that most content here, is not a story, or in form 
 
 Never, if you're forced to do this. But if you've somehow reached here organically, maybe you can find some inspiration wherever you are in life. I'm the most average human being with a lot of complications, and if I can do anything, then you have no reason to doubt yourself. 
 
-You can also have a look around this small [library](https://www.notion.so/Library-A-virtual-one-for-now-41fdd04dbfe54adea78209b316decfe3) we have here, and do let me know, if you find anything interesting in these virtual shelves. 
+You can also have a look around this small [library](https://www.libib.com/u/single-shot) we have here, and do let me know, if you find anything interesting in these virtual shelves. 
 
 *Thanks for your time*
