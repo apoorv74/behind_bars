@@ -315,6 +315,7 @@ exports.handler = async (event) => {
     // Auth
     const authHeader = event.headers.authorization || event.headers.Authorization;
     if (!authHeader) {
+      console.log('[micropub] 401 - No authorization header');
       return {
         statusCode: 401,
         headers,
@@ -323,11 +324,13 @@ exports.handler = async (event) => {
     }
 
     await verifyToken(authHeader);
+    console.log('[micropub] Token verified');
 
     // Parse and create post
     const data = parseRequest(event);
 
     if (data.action) {
+      console.log(`[micropub] 501 - Unsupported action: ${data.action}`);
       return {
         statusCode: 501,
         headers,
@@ -337,6 +340,7 @@ exports.handler = async (event) => {
 
     const properties = data.properties || {};
     const { markdown, filename, type, slug } = createMarkdown(properties);
+    console.log(`[micropub] Creating ${type}: ${filename}`);
 
     // Commit to GitHub
     const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
@@ -344,8 +348,10 @@ exports.handler = async (event) => {
     const commitMessage = `Micropub: New ${type}${properties.name?.[0] ? ` - ${properties.name[0]}` : ''}`;
 
     await commitToGitHub(octokit, path, markdown, commitMessage);
+    console.log(`[micropub] Committed to GitHub: ${path}`);
 
     const postUrl = `${CONFIG.site.url}/docs/notes/${slug}/`;
+    console.log(`[micropub] 201 - Post created: ${postUrl}`);
 
     return {
       statusCode: 201,
@@ -354,7 +360,7 @@ exports.handler = async (event) => {
     };
 
   } catch (error) {
-    console.error('Micropub error:', error.message);
+    console.error(`[micropub] Error: ${error.message}`);
 
     if (error.message.includes('token') || error.message.includes('Token')) {
       return {
