@@ -15,7 +15,7 @@ const CONFIG = {
     contentPath: 'content/docs/notes'
   },
   site: {
-    url: 'https://behindbars.netlify.app',
+    url: 'https://quietrevolutions.in',
     author: 'Apoorv Anand'
   }
 };
@@ -38,7 +38,7 @@ async function verifyToken(token) {
 
   const data = await response.json();
 
-  if (!data.me || !data.me.includes('behindbars.netlify.app')) {
+  if (!data.me || !data.me.includes('https://quietrevolutions.in')) {
     throw new Error('Token not valid for this site');
   }
 
